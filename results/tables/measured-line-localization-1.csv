@@ -1,0 +1,4 @@
+Condition,Translation median/p95 m,Yaw median/p95 deg,Catastrophic / mirrored
+Goalposts + L/T baseline,0.136121 / 0.485863,1.162288 / 6.460830,0 / 0 of 6
+Goalposts + measured lines,0.034177 / 0.243307,0.682023 / 5.287747,0 / 0 of 6
+Goalposts + lines + L/T,0.052482 / 0.265097,0.613552 / 4.949603,0 / 0 of 6

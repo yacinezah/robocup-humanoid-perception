@@ -1,0 +1,8 @@
+Metric,Value
+Aggregate line Dice,0.8487730249
+Image-macro line Dice,0.7834277820
+Relaxed line F1,0.9037141476
+Line precision / recall,0.8301136603 / 0.8682905323
+Field Dice,0.9779854123
+Background Dice,0.9695265124
+No-line false-positive ratio,0.00003059895833

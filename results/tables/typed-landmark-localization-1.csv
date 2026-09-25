@@ -1,0 +1,6 @@
+Condition,Translation median/p95 m,Yaw median/p95 deg,Convergence,Recovery
+Non-junction baseline,0.971 / 2.555,17.60 / 173.57,23.3%,0%
+Exact oracle L/T,0.299 / 0.718,3.73 / 23.53,100%,80%
+Actual YOLOv8 measurements + oracle ID,0.437 / 0.771,4.95 / 24.55,93.3%,60%
+YOLOv8 learned one-to-one association,0.641 / 4.372,13.85 / 178.49,53.3%,0%
+Actual YOLO26 measurements + oracle ID,0.437 / 0.775,4.92 / 24.54,93.3%,60%

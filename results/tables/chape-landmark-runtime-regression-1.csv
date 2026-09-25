@@ -1,0 +1,7 @@
+Check,Outcome
+Landmark observations reach ObservationModel,Passed
+Incompatible observation contribution,"Neutral 0 before, clipped -10 after"
+Finite normalized particle weights,Passed
+"NaN, Inf or crash",None observed
+Missing observations and goalpost/L/T interfaces,Safe in the tested regression
+"Update p95, unpatched / patched",3.245434 / 3.320454 ms

@@ -1,0 +1,4 @@
+System,Dice,Boundary F1,False field,Border recall,Detector mAP50-95
+Efficient frozen sharing + KD,0.990232,0.878308,0.006828,0.946933,0.674028
+Joint sharing + KD,0.990761,0.885570,0.006790,0.954108,0.687033
+Separate YOLO26 + MobileNet,0.989307,0.887347,0.007964,0.951381,0.674028

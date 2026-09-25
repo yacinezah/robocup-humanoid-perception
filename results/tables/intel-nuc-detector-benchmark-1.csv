@@ -1,0 +1,5 @@
+Detector,One-thread p95 ms,Four-thread p95 ms
+Controlled YOLOv8n-640,184.331,164.389
+Controlled YOLO26n-640,142.950,88.471
+Production YOLOv8-v2,176.710,104.201
+Historical YOLO26n-320,37.711,23.671

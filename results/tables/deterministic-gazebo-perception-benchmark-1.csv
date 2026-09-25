@@ -1,0 +1,5 @@
+Detector,Synthetic box mAP50-95,Ball recall,Goalpost recall,L/T F1@10,Live C++ p95 ms
+Production reference,0.3958,0.5606,0.8788,0.7039,13.710
+Historical YOLO26n-320,0.1954,0.3556,0.3404,0.5384,5.044
+Controlled YOLOv8n-640,0.3144,0.5668,0.6269,0.7337,13.909
+Controlled YOLO26n-640,0.2539,0.5311,0.3712,0.6676,11.882

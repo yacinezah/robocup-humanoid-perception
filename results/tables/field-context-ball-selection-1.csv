@@ -1,0 +1,4 @@
+Surface / policy,True-ball recall,Boundary recall,Off-field accepts
+"Held-out stress, production first-candidate",0.3424,0.6330,300
+"Held-out stress, soft reject-only",0.3424,0.6330,0
+"Held-out stress, soft reranking",0.4491,0.8723,0

@@ -1,0 +1,8 @@
+Interface finding,Engineering consequence
+Accelerometer and bias-corrected angular rate are available,Relative rotation is plausible; field-aligned absolute heading is not established
+Gravity observation is independent of yaw,Gravity cannot remove global yaw offset
+Torso yaw initializes/resets to zero,It cannot silently become persistent absolute field heading
+Camera projection uses roll/pitch,Projection does not create an independent heading measurement
+Localizer consumes walk odometry,Synthetic heading input is a new benchmark assumption
+Known-placement resets exist,Placement priors differ from arbitrary kidnapping recovery
+Lines carry endpoints; L/T observations lack arm orientation,Box centers cannot be treated as orientation measurements

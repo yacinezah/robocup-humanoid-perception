@@ -1,0 +1,6 @@
+Condition,Masks,Dice,Boundary F1@3,False field,Border recall
+Original compact adapter,284,0.959882,0.631050,0.039259,0.925027
+Expanded exact adapter,"1,381",0.985382,0.743364,0.010771,0.928736
+Historical detector + adapter,"6,649",0.983832,0.733400,0.011681,0.928643
+Newer detector + adapter,"6,649",0.981950,0.752552,0.015820,0.941868
+Separate MobileNet reference,"6,649",0.990325,0.817604,0.006470,0.951036

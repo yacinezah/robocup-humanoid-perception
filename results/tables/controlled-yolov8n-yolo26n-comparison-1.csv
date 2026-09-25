@@ -1,0 +1,7 @@
+Three-seed sealed-test mean,YOLOv8n-640,YOLO26n-640
+mAP50-95,0.529598,0.519570
+Macro F1,0.773583,0.771719
+Ball F1,0.957776,0.932245
+Goalpost F1,0.800606,0.782725
+Typed junction F1@10 px,0.758542,0.760153
+Junction-center p95 px,5.962636,6.071726

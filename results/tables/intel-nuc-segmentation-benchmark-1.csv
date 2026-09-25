@@ -1,0 +1,8 @@
+Configuration,One-thread p95 ms,Four-thread p95 ms
+Fast-SCNN field segmenter,19.724,13.079
+MobileNetV3-Small field segmenter,39.903,24.855
+Boundary-transfer shared model,57.511,36.915
+Earlier compact shared adapter,48.419,30.803
+Expanded-data shared adapter,58.763,36.808
+Historical YOLO26n-320 + Fast-SCNN,55.333,35.620
+Historical YOLO26n-320 + MobileNet,75.706,47.547

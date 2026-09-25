@@ -1,0 +1,4 @@
+Architecture,Dice,Boundary F1@3,False-field fraction,Border recall
+Fast-SCNN,0.981916,0.761577,0.014012,0.942590
+MobileNetV3-Small U-Net,0.990325,0.817604,0.006470,0.951036
+Boundary-transfer shared model,0.989132,0.791299,0.008376,0.945368
