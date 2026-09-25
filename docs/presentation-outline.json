@@ -1,0 +1,62 @@
+[
+  {
+    "title": "RoboCup Humanoid Perception",
+    "text": "Vision, efficient inference and probabilistic localization",
+    "sub": "Yacine Zahouani\nITA-ITAndroids, supervised by Marcos Maximo\nPublic engineering overview",
+    "refs": "Project reports [6]-[21]. Public edition 1.0.0. Original diagrams and aggregate redraws by Yacine Zahouani. This is a self-contained portfolio overview, not the administrative school deck."
+  },
+  {
+    "title": "Perception connects image evidence to robot pose",
+    "image": "system-overview",
+    "text": "My contributions span evaluation design, model research, CPU tooling and probabilistic system debugging.",
+    "refs": "Reports [6]-[21]. The robot, inherited team software and established architecture families predate this research."
+  },
+  {
+    "title": "Reliable labels change which results we can trust",
+    "text": "Corrected line masks and deterministic preprocessing\nSequence and near-duplicate exposure audits\n54 and 66 overlapping groups in two historical splits",
+    "sub": "Line Dice 0.8488 on corrected final-only evidence",
+    "refs": "Reports [6]-[7]. These are counts from distinct historical splits, not a 54/66 ratio. The explicit-line task is distinct from binary field segmentation."
+  },
+  {
+    "title": "Field quality and CPU cost favor different specialists",
+    "image": "segmentation-tradeoff",
+    "text": "Fast-SCNN: 13.079 ms four-thread p95 on the NUC. MobileNet: strongest field-quality reference.",
+    "refs": "Reports [8]-[9]. Quality comes from the open 77-image bridge. NUC measurements are actual hardware evidence. Binary field exports have constant detector placeholders."
+  },
+  {
+    "title": "YOLO26 is faster, with a measurable accuracy tradeoff",
+    "image": "detector-comparison",
+    "text": "Same data, three seeds. 46% lower NUC four-thread p95 for YOLO26, without complete accuracy noninferiority.",
+    "refs": "Reports [10]-[11]. 12,018 images. mAP50-95 0.529598 versus 0.519570. Runtime 164.389 versus 88.471 ms. Historical and production anchors have incompatible accuracy protocols."
+  },
+  {
+    "title": "Private field semantics support strong shared perception",
+    "image": "multitask-sharing",
+    "text": "Selected field quality approaches the specialist. Matched controls isolate capacity, adaptation and distillation.",
+    "refs": "Reports [12]-[13]. Open development evidence only. Efficient selected-seed Dice 0.990232. Confirmation seed sensitivity, strict raw parity failures and a 6.55% pooled laptop CPU gain limit promotion."
+  },
+  {
+    "title": "Deterministic simulation exposes downstream behavior",
+    "text": "16 scenarios and 2,250 synchronized frames\nActual ITAndroids perception path in ROS/Gazebo\nGeometry and temporal evidence for causal tests",
+    "sub": "Field-context reranking improved stress cases, then regressed on untouched replay.",
+    "refs": "Reports [14]-[15]. Synthetic GT supports ball/goalpost boxes and L/T centers, not robot/X box scores. Stress: 300 off-field accepts reduced to zero. Untouched replay recall fell 1.708 percentage points. Simulator timing is not NUC timing."
+  },
+  {
+    "title": "Landmark measurements retain most oracle benefit",
+    "image": "localization-causal",
+    "text": "Actual measurements with correct map identity recover 79.5% of median oracle gain. Learned identity remains difficult.",
+    "refs": "Report [16]. Gazebo, synthetic command odometry, oracle identity diagnostic only. Baseline/exact/actual-ID/learned medians 0.971/0.299/0.437/0.641 m. Learned p95 4.372 m. Later map/plane audit qualifies an association-only diagnosis."
+  },
+  {
+    "title": "Tracking improves while recovery remains unresolved",
+    "image": "tracking-and-lines",
+    "text": "Robust observations and measured lines improve typical tracking. Tail errors and field symmetry remain integration limits.",
+    "refs": "Reports [19]-[21]. Separate suites and scales, do not pool. Synthetic heading. Measured-line test reused development trajectories. Map counts/plane inconsistencies and local failures accompany 180-degree symmetry."
+  },
+  {
+    "title": "A focused software fix and a reproducible handoff",
+    "text": "C++ likelihood-gate defect diagnosed and corrected\nComponent, Gazebo and real-Chape runtime validation\nCode, model contracts, reports and checked artifacts",
+    "sub": "Next: team review, real accuracy data and an agreed CPU budget",
+    "refs": "Reports [17]-[18]. The patch remains review-ready, not merged or deployed. Real-Chape regression is runtime/interface evidence without pose ground truth. All scientific claims remain tied to their protocol. Repository: github.com/yacinezah/robocup-humanoid-perception."
+  }
+]
