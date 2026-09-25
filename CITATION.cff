@@ -1,0 +1,11 @@
+cff-version: 1.2.0
+message: "Cite the relevant technical report for a specific result, and this repository for the software collection."
+title: "RoboCup Humanoid Perception: Vision, Efficient Inference and Probabilistic Localization"
+authors:
+  - family-names: Zahouani
+    given-names: Yacine
+type: software
+version: 1.0.0
+repository-code: "https://github.com/yacinezah/robocup-humanoid-perception"
+url: "https://github.com/yacinezah/robocup-humanoid-perception"
+abstract: "Research software and technical reports covering trustworthy evaluation, field segmentation, six-class detection, selective sharing, CPU inference and probabilistic humanoid localization."
