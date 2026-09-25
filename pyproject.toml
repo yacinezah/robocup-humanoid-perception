@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "robocup-humanoid-perception"
+version = "1.0.0"
+description = "Reproducible humanoid perception, selective sharing and probabilistic localization"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [{name = "Yacine Zahouani"}]
+dependencies = ["numpy>=2.0", "scipy>=1.13", "opencv-python-headless>=4.10,<5"]
+
+[project.optional-dependencies]
+runtime = ["openvino==2026.2.0"]
+test = ["pytest>=8,<10"]
+publication = ["matplotlib>=3.9", "reportlab>=4", "pypdf>=5", "pymupdf>=1.24"]
+
+[project.scripts]
+perception-infer = "robocup_perception.runtime.infer_openvino:main"
+perception-benchmark = "robocup_perception.runtime.benchmark:main"
+perception-parity = "robocup_perception.runtime.parity:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
