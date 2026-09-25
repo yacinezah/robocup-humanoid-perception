@@ -1,0 +1,54 @@
+[
+  {
+    "figure": "system-overview",
+    "sources": [
+      "docs/reports/index.md"
+    ],
+    "interpretation": "Conceptual system diagram; inherited robot/frameworks credited in README.",
+    "png_sha256": "bcaa86fc08dfdd4af3a2f7129f7bfef6a827fd12d00fc4def1f42648884d1c72"
+  },
+  {
+    "figure": "segmentation-tradeoff",
+    "sources": [
+      "binary-field-segmentation-1.csv",
+      "intel-nuc-segmentation-benchmark-1.csv"
+    ],
+    "interpretation": "Open 77-image field bridge and actual NUC timing; explicit-line task excluded from this ranking.",
+    "png_sha256": "51b30d7354594fb3824ca4064055312ab5a1d03b758644b2988f4d346b0327fa"
+  },
+  {
+    "figure": "detector-comparison",
+    "sources": [
+      "controlled-yolov8n-yolo26n-comparison-1.csv",
+      "intel-nuc-detector-benchmark-1.csv"
+    ],
+    "interpretation": "Accuracy comparison only for controlled pair. Hollow runtime anchors have incompatible accuracy protocols. Dashed line: 50 ms.",
+    "png_sha256": "54c629a9fea13cefab5dc3685a31178021f468f2b6c6553d587e1a36d66022ef"
+  },
+  {
+    "figure": "multitask-sharing",
+    "sources": [
+      "selective-sharing-multitask-perception-1.csv",
+      "docs/methods/multitask-contract.md"
+    ],
+    "interpretation": "Selected seed, teacher/history-exposed field bridge. Confirmation variability prevents recipe-level noninferiority.",
+    "png_sha256": "2c104d1b1c879c289c6cb8681be8747103e85a172161100db65de4a6241d9d01"
+  },
+  {
+    "figure": "localization-causal",
+    "sources": [
+      "typed-landmark-localization-1.csv"
+    ],
+    "interpretation": "Gazebo with synthetic command odometry. Oracle identity is diagnostic. Later map/plane audit qualifies an association-only diagnosis.",
+    "png_sha256": "cc0fe2aeaca7389d5d6a4df3397bde3522b4bff7655a20d9933f6fa2ad0a7228"
+  },
+  {
+    "figure": "tracking-and-lines",
+    "sources": [
+      "sensor-aided-localization-1.csv",
+      "measured-line-localization-1.csv"
+    ],
+    "interpretation": "Separate protocols and y scales. Synthetic heading, no real-robot pose accuracy. Line result is development-only.",
+    "png_sha256": "c8c1baabb41857ee26e6cb87471ef02220bdfeb3f7e78274cc9dcd812e65b527"
+  }
+]

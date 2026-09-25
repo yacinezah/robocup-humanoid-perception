@@ -1,0 +1,402 @@
+{
+  "edition": "1.0.0",
+  "models": [
+    {
+      "id": "field-line-reference",
+      "licence": "Inherited MIT segmentation implementation; upstream model architecture/pretraining terms remain applicable.",
+      "contract": "See model card. Exact archive exports; no production replacement. Raw/operational parity statuses remain historical.",
+      "files": [
+        {
+          "file": "model.onnx",
+          "sha256": "59da2cf8cfa664c8132c633e3ea6d9481acbd18648d86f306bd5e30573f7813e",
+          "bytes": 26827488
+        },
+        {
+          "file": "model.xml",
+          "sha256": "e79459d547333c202b329c7e64d4163f64a8e63977fdb83e6342ba225128d21c",
+          "bytes": 369681
+        },
+        {
+          "file": "model.bin",
+          "sha256": "8cd9fea5f031d1a5c0a13b379f4d8632f3e6fc94ade8affd7b420d9d131596f6",
+          "bytes": 26691860
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "logits",
+            "shape": [
+              1,
+              3,
+              320,
+              320
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "field-line-reference-v1.0.0.zip"
+    },
+    {
+      "id": "field-fast-scnn",
+      "licence": "Inherited MIT segmentation implementation; upstream model architecture/pretraining terms remain applicable.",
+      "contract": "See model card. Exact archive exports; no production replacement. Raw/operational parity statuses remain historical.",
+      "files": [
+        {
+          "file": "model.onnx",
+          "sha256": "96e8babd0026d336490f7df9e9020c5c7e50345aee8618729f0b761932afd1a2",
+          "bytes": 891069
+        },
+        {
+          "file": "model.xml",
+          "sha256": "df79c71ba9dd53bffb6f940b6ff3e11ab061819164aef9e6fca974bf172be803",
+          "bytes": 53262
+        },
+        {
+          "file": "model.bin",
+          "sha256": "352a323e908510eb902f85d612954f65c1d978519cf26e2f900eecab8a3bc7a2",
+          "bytes": 880412
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "detections",
+            "shape": [
+              1,
+              300,
+              6
+            ],
+            "finite": true,
+            "input_dependent": false
+          },
+          {
+            "name": "field_logits",
+            "shape": [
+              1,
+              1,
+              320,
+              320
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "field-fast-scnn-v1.0.0.zip"
+    },
+    {
+      "id": "field-mobilenet",
+      "licence": "Inherited MIT segmentation implementation; upstream model architecture/pretraining terms remain applicable.",
+      "contract": "See model card. Exact archive exports; no production replacement. Raw/operational parity statuses remain historical.",
+      "files": [
+        {
+          "file": "model.onnx",
+          "sha256": "d5aac50bd82956f7b99279b6a8fa5ff948a43c33239bd5b70a8ee4d6cc6b3ee1",
+          "bytes": 1710301
+        },
+        {
+          "file": "model.xml",
+          "sha256": "1efbc18d8ce412d2107ae2dffa739a5cc5f837df2aa4e9d58b918d67455cf70b",
+          "bytes": 172815
+        },
+        {
+          "file": "model.bin",
+          "sha256": "bd3004053a62ab043e3c2a1993baa03ddfc8ca0731276218b3b4cf1fe380f8a7",
+          "bytes": 1674436
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "detections",
+            "shape": [
+              1,
+              300,
+              6
+            ],
+            "finite": true,
+            "input_dependent": false
+          },
+          {
+            "name": "field_logits",
+            "shape": [
+              1,
+              1,
+              320,
+              320
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "field-mobilenet-v1.0.0.zip"
+    },
+    {
+      "id": "detector-historical-320",
+      "licence": "Ultralytics-derived exports: AGPL-3.0 terms; source framework/tag and wrappers accompany repository.",
+      "contract": "See model card. ONNX description metadata scrubbed; graph/weights unchanged. IR files remain exact archived artifacts. Historical parity statuses are unchanged.",
+      "files": [
+        {
+          "file": "model.onnx",
+          "sha256": "ff13be1b631517b01ce19ee779886416b0b7a8dacffe24d8cbb6f3a240bb093b",
+          "bytes": 9635925,
+          "archival_sha256": "8ca959a7cc0c0b6229a940357f284a2ff47319fb88c8d273542688061b29cb92",
+          "metadata_only_public_derivative": true
+        },
+        {
+          "file": "model.xml",
+          "sha256": "78543e423c9af9ff97bc5a4efd24aca5ef4ef67f15f2f293be34ba11ed948378",
+          "bytes": 377137
+        },
+        {
+          "file": "model.bin",
+          "sha256": "6ec0a423d54870bb1a54afd178679ebc070f98f724b517f0f560303bbbb340cb",
+          "bytes": 9529596
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "output_0",
+            "shape": [
+              1,
+              300,
+              6
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "detector-historical-320-v1.0.0.zip"
+    },
+    {
+      "id": "detector-yolov8n-640",
+      "licence": "Ultralytics-derived exports: AGPL-3.0 terms; source framework/tag and wrappers accompany repository.",
+      "contract": "See model card. ONNX description metadata scrubbed; graph/weights unchanged. IR files remain exact archived artifacts. Historical parity statuses are unchanged.",
+      "files": [
+        {
+          "file": "model.onnx",
+          "sha256": "601395c2e66334bf0a963a1a9ce94c0047a9b9028f651e629f7039eded44a20b",
+          "bytes": 12269235,
+          "archival_sha256": "16ddb147ab1e9c78f08b2491c1a65af6ed05f65661759b6d6fb85fdcd6be36ea",
+          "metadata_only_public_derivative": true
+        },
+        {
+          "file": "model.xml",
+          "sha256": "0b467f11861fd9084771796ca040f68fa4491e25afd76c0eb69db41f825f56c6",
+          "bytes": 226978
+        },
+        {
+          "file": "model.bin",
+          "sha256": "b885414ab4e11c69281f005084b1379196591b28a7dcbd529239a240ecbf7ff8",
+          "bytes": 12128320
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "output_0",
+            "shape": [
+              1,
+              10,
+              8400
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "detector-yolov8n-640-v1.0.0.zip"
+    },
+    {
+      "id": "detector-yolo26n-640",
+      "licence": "Ultralytics-derived exports: AGPL-3.0 terms; source framework/tag and wrappers accompany repository.",
+      "contract": "See model card. ONNX description metadata scrubbed; graph/weights unchanged. IR files remain exact archived artifacts. Historical parity statuses are unchanged.",
+      "files": [
+        {
+          "file": "model.onnx",
+          "sha256": "3bb6ad0b85f45cf51cda4bc7564b0a706c476fa795ea7ddf5fc32361e8d2da1e",
+          "bytes": 9809183,
+          "archival_sha256": "fd5ccacec64e3a1e900b04f829679f07a84cef7f9f0117cd40a354522a19c08c",
+          "metadata_only_public_derivative": true
+        },
+        {
+          "file": "model.xml",
+          "sha256": "dd2bec12ec493b95cee2119c65a4fbf5eb1eeca356b81a66ec23b588f892a843",
+          "bytes": 377260
+        },
+        {
+          "file": "model.bin",
+          "sha256": "beca2874bee21f373a9e0048b3697d5cdda05eb038211bc4672c7c52984250fc",
+          "bytes": 9605196
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "output_0",
+            "shape": [
+              1,
+              300,
+              6
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "detector-yolo26n-640-v1.0.0.zip"
+    },
+    {
+      "id": "multitask-efficient-sharing",
+      "licence": "Combined Ultralytics-derived model: AGPL-3.0 terms; original field-path code included in repository.",
+      "contract": "Raw-head graph, RGB640 letterbox, field320, common external decoder/NMS; strict raw parity failed.",
+      "files": [
+        {
+          "file": "multitask.onnx",
+          "sha256": "c9acee076a363d91271f8cd0a26e16ac53fccaa1365a805986ef4c64901282fc",
+          "bytes": 10568056
+        },
+        {
+          "file": "multitask.xml",
+          "sha256": "c39ea445ff86f38104c59fa97dd67fa6f84d0355fa6a08b99dc58d98b49f1c2b",
+          "bytes": 535554
+        },
+        {
+          "file": "multitask.bin",
+          "sha256": "17b0ef7545432ee824639a2eaa4d29c19698d7da50922faffab40d23b4d2e295",
+          "bytes": 10441072
+        },
+        {
+          "file": "best.pt",
+          "sha256": "e271338fb6b6d6f5d30c220052f6c98c7de466a288b9d944167bd78d0806fe89",
+          "bytes": 11375301
+        },
+        {
+          "file": "architecture.yaml",
+          "sha256": "45b0708047aeeb33382ec60b7c817e0ae0906196757cf71bc5a9b0a18b8e04f2",
+          "bytes": 1555
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "detector_raw",
+            "shape": [
+              1,
+              10,
+              8400
+            ],
+            "finite": true,
+            "input_dependent": true
+          },
+          {
+            "name": "field_logits",
+            "shape": [
+              1,
+              1,
+              320,
+              320
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "multitask-efficient-sharing-v1.0.0.zip"
+    },
+    {
+      "id": "multitask-joint-sharing",
+      "licence": "Combined Ultralytics-derived model: AGPL-3.0 terms; original field-path code included in repository.",
+      "contract": "Raw-head graph, RGB640 letterbox, field320, common external decoder/NMS; strict raw parity failed.",
+      "files": [
+        {
+          "file": "multitask.onnx",
+          "sha256": "34d9765a3d1795ad8b23236f0b1b7a9e1f891361a766b43fcdf3d7e5c4562d06",
+          "bytes": 13043396
+        },
+        {
+          "file": "multitask.xml",
+          "sha256": "77194fe8c6fa8bd5d417d2386d6608fafe20799b8baa86208bd1b0b25058a69d",
+          "bytes": 405020
+        },
+        {
+          "file": "multitask.bin",
+          "sha256": "740b7ca6a20c592e56c14fe49a78bccfaa64036b22bce1993b9b4615e5ecf7cc",
+          "bytes": 12945716
+        },
+        {
+          "file": "best.pt",
+          "sha256": "283213b8202053e0e34379ebf28a4696b808ae11f174808f17d6c12c11900b80",
+          "bytes": 13232874
+        },
+        {
+          "file": "architecture.yaml",
+          "sha256": "40b20bb7383b5d15e6e0e278adb568d07a1064692906541ed8380ede20f401a7",
+          "bytes": 1227
+        }
+      ],
+      "publication_validation": {
+        "onnx_checker": "passed",
+        "openvino_load": "passed",
+        "outputs": [
+          {
+            "name": "detector_raw",
+            "shape": [
+              1,
+              70,
+              8400
+            ],
+            "finite": true,
+            "input_dependent": true
+          },
+          {
+            "name": "field_logits",
+            "shape": [
+              1,
+              1,
+              320,
+              320
+            ],
+            "finite": true,
+            "input_dependent": true
+          }
+        ],
+        "scope": "Two synthetic inputs. No accuracy, latency or strict-parity re-evaluation."
+      },
+      "asset": "multitask-joint-sharing-v1.0.0.zip"
+    }
+  ],
+  "excluded": [
+    "Production detector",
+    "Datasets and protected identities",
+    "Optimizer states",
+    "All-seed checkpoints"
+  ]
+}

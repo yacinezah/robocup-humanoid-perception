@@ -1,0 +1,514 @@
+{
+  "edition": "1.0.0",
+  "note": "Legacy IDs occur only for provenance or deterministic compatibility. No evaluation identities are published.",
+  "sources": [
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/model.py",
+      "source_sha256": "143f8a069d54ad7c34fe9732732a49e694a7c7155fc82f7c3dc271e51e70a078",
+      "public_path": "src/robocup_perception/multitask/model.py",
+      "public_sha256": "f3e4601b4e8b77f0e10f30a37fdae313cd84f008f4ee739be762957613d31305",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/efficient_model.py",
+      "source_sha256": "c08cbe34dafec48a19bd82835620e32aa20f6955e3706e2a1b339ae33b274201",
+      "public_path": "src/robocup_perception/multitask/efficient_model.py",
+      "public_sha256": "ba0d724c371b753641edaf746b44c9a0ced0842a4022a56567fb32de3d00f48f",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/decode.py",
+      "source_sha256": "f32851e39cbda33ec771a8ef9e3b2e846f3a0c93c809ced427cd831cd385e830",
+      "public_path": "src/robocup_perception/detection/decode.py",
+      "public_sha256": "f32851e39cbda33ec771a8ef9e3b2e846f3a0c93c809ced427cd831cd385e830",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/metrics.py",
+      "source_sha256": "b9fcc5f861ba99030f235691d91afdf03626bb0eaa61598e93156c20574e8371",
+      "public_path": "src/robocup_perception/data/metrics.py",
+      "public_sha256": "b9fcc5f861ba99030f235691d91afdf03626bb0eaa61598e93156c20574e8371",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/infer_openvino.py",
+      "source_sha256": "5d7f71e7d6dca23ad1503cafa7659cfe5be3614805df10def6549a9bb37f4e6f",
+      "public_path": "src/robocup_perception/runtime/infer_openvino.py",
+      "public_sha256": "95d957e294e4fe1b0603fcf92c5a3d7902f29616b9247543ceb3b4b63f3be3c8",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/data.py",
+      "source_sha256": "fdfeadb1821408929b247953189da597e2173b2adb87d05ba86ec0a34103e7ce",
+      "public_path": "src/robocup_perception/multitask/data.py",
+      "public_sha256": "05eaac08cf59d52a4d1ebe216d9a655ba923b8ed2ad466e5c131a53f22a588e0",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/evaluate.py",
+      "source_sha256": "2de1c25e6209102b19fc07f7b87ad19a97b66e140aa841e7e9b2f5b78799f7c3",
+      "public_path": "src/robocup_perception/multitask/evaluate.py",
+      "public_sha256": "6d9453c7dc0ac55f25911fbb1288b10692bfb26435c9ee302bf8faef679e7401",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/train.py",
+      "source_sha256": "6387a5a131a1379146b9e57bf7751dc89bc699511d5cbd523453e5b066e8b84e",
+      "public_path": "src/robocup_perception/multitask/train.py",
+      "public_sha256": "92e2037ca6bbddcea040f3291ec5178e94be0793de935155d1e6e486cd80c3b8",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/LOC-R1/scripts/robust_localization.py",
+      "source_sha256": "f53a27e9f23a87b1f6eaf3006e4eec0beac58f5830907cb89ff6cf679daa5bc5",
+      "public_path": "src/robocup_perception/localization/association.py",
+      "public_sha256": "f53a27e9f23a87b1f6eaf3006e4eec0beac58f5830907cb89ff6cf679daa5bc5",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "post_consolidation_research/LOC-R5-LINE-CONSTRAINT/line_model.py",
+      "source_sha256": "3333a5660046abe7fff30fa98261f623690121cb2e9a5de73748244d0dc9e5f9",
+      "public_path": "src/robocup_perception/localization/lines.py",
+      "public_sha256": "3333a5660046abe7fff30fa98261f623690121cb2e9a5de73748244d0dc9e5f9",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "post_consolidation_research/LOC-R2-SENSOR/scripts/sensors.py",
+      "source_sha256": "a94a27427b4ac941dc553122ab2f1a341676e8342d7b1872f6db4e9fce95d4b7",
+      "public_path": "src/robocup_perception/localization/synthetic_heading.py",
+      "public_sha256": "a94a27427b4ac941dc553122ab2f1a341676e8342d7b1872f6db4e9fce95d4b7",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "post_consolidation_research/LOC-R5-LINE-CONSTRAINT/test_line_model.py",
+      "source_sha256": "6dfcfb0f753fa7dbdc975bc8e1e699be10de1a1e888a85d30f55daba18a64dfa",
+      "public_path": "tests/unit/test_lines.py",
+      "public_sha256": "3647052c1526a2f00cc1b978e2094b6cc502f969cc0b71d37a72dfa8f9368b29",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "experiments/prompt89_prompt94_continuation_20260814/scripts/build_feature_cache.py",
+      "source_sha256": "4bad2f4237b0be7be8d8ff2cbe2588eb9c2c4060c4a959cdb8189cb2afbd2a25",
+      "public_path": "src/robocup_perception/ball_selection/features.py",
+      "public_sha256": "002ba8048bd0cb21a0b02864b8d08d492cde85253add379df66d2e5bf1dbc456",
+      "changes": "selected definitions; import/configuration adaptation"
+    },
+    {
+      "source": "experiments/prompt89_prompt94_continuation_20260814/scripts/evaluate_filter.py",
+      "source_sha256": "e7360d610568da7fc0c3690d50191f76ae40e6a95686a38a2c33d13d69177cb6",
+      "public_path": "src/robocup_perception/ball_selection/scoring.py",
+      "public_sha256": "3fc17d8c273725101c67fac2c680e81484fe2400018f55fb549b50b4e221deb7",
+      "changes": "selected definitions; import/configuration adaptation"
+    },
+    {
+      "source": "final_consolidation_20260831/04_SOFTWARE_HANDOFF/localizer_patch/0001-fix-incompatible-landmark-likelihood-gating.patch",
+      "source_sha256": "f4adc6807e7ed9254029cc6cdcd44bb853574b34f89001a61a949d4bc5e70ddd",
+      "public_path": "patches/observation-likelihood/0001-fix-incompatible-landmark-likelihood-gating.patch",
+      "public_sha256": "f4adc6807e7ed9254029cc6cdcd44bb853574b34f89001a61a949d4bc5e70ddd",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "final_consolidation_20260831/04_SOFTWARE_HANDOFF/localizer_patch/ObservationModelGate_ComponentTest.cpp",
+      "source_sha256": "1242e0d25ba9a4e1556636910c718f2164140f568af77a3aa69daeeae920c168",
+      "public_path": "patches/observation-likelihood/ObservationModelGate_ComponentTest.cpp",
+      "public_sha256": "1242e0d25ba9a4e1556636910c718f2164140f568af77a3aa69daeeae920c168",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/LICENSE.md",
+      "source_sha256": "87dd657e4f7432b95bbcdab08b7f1cb3b1339d863de1b6053cf7491d00f0d7f7",
+      "public_path": "LICENSES/segmentation-upstream-MIT.txt",
+      "public_sha256": "87dd657e4f7432b95bbcdab08b7f1cb3b1339d863de1b6053cf7491d00f0d7f7",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/__init__.py",
+      "source_sha256": "20c8e430ededc2143396e553a3c67aac4ec483ef54efdfcb18a31cb162ca0646",
+      "public_path": "src/soccer_segmentation/__init__.py",
+      "public_sha256": "20c8e430ededc2143396e553a3c67aac4ec483ef54efdfcb18a31cb162ca0646",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/__main__.py",
+      "source_sha256": "09289919876aa96fbcb67ff7612a8f1c810b658a55d2ff74943cd86cb3e706da",
+      "public_path": "src/soccer_segmentation/__main__.py",
+      "public_sha256": "09289919876aa96fbcb67ff7612a8f1c810b658a55d2ff74943cd86cb3e706da",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/create_model.py",
+      "source_sha256": "acfa1730f7c38d77d69ce3adff358b6912b819adca673ad165f6acae54012e9b",
+      "public_path": "src/soccer_segmentation/create_model.py",
+      "public_sha256": "acfa1730f7c38d77d69ce3adff358b6912b819adca673ad165f6acae54012e9b",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/data/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_path": "src/soccer_segmentation/data/__init__.py",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/data/create_dataloader.py",
+      "source_sha256": "c23f2cf7909910dc476286d723646b5c0662556a7716bf5ef3a7d7d273aa1060",
+      "public_path": "src/soccer_segmentation/data/create_dataloader.py",
+      "public_sha256": "c23f2cf7909910dc476286d723646b5c0662556a7716bf5ef3a7d7d273aa1060",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/data/dataloader/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_path": "src/soccer_segmentation/data/dataloader/__init__.py",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/data/dataloader/dataset.py",
+      "source_sha256": "20ae9fbc75e870f172f23baca0d64a489ee5380ae5c2d539935edacc09d6bd9c",
+      "public_path": "src/soccer_segmentation/data/dataloader/dataset.py",
+      "public_sha256": "20ae9fbc75e870f172f23baca0d64a489ee5380ae5c2d539935edacc09d6bd9c",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/__init__.py",
+      "source_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "public_path": "src/soccer_segmentation/models/__init__.py",
+      "public_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/decoder/segnet.py",
+      "source_sha256": "ee9fe0134cf664e32061e22ad538bac1090315b441b88ef9fee8ad84a06733fd",
+      "public_path": "src/soccer_segmentation/models/decoder/segnet.py",
+      "public_sha256": "ee9fe0134cf664e32061e22ad538bac1090315b441b88ef9fee8ad84a06733fd",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/DefaultSegNet.py",
+      "source_sha256": "caa6ec2b892d537ce2d386b23bc10b8143502ec9178a27c39d1844592741c271",
+      "public_path": "src/soccer_segmentation/models/DefaultSegNet.py",
+      "public_sha256": "caa6ec2b892d537ce2d386b23bc10b8143502ec9178a27c39d1844592741c271",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/DefaultUNet.py",
+      "source_sha256": "ab592f94f3184c778818db04127a998472fdd19ea3137d3aaec69dff5153dda6",
+      "public_path": "src/soccer_segmentation/models/DefaultUNet.py",
+      "public_sha256": "ab592f94f3184c778818db04127a998472fdd19ea3137d3aaec69dff5153dda6",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/encoder/mobilenet.py",
+      "source_sha256": "54b5f09765afd4b667060ec92b4d2eee5717580b03b503beef09c41f3695344f",
+      "public_path": "src/soccer_segmentation/models/encoder/mobilenet.py",
+      "public_sha256": "54b5f09765afd4b667060ec92b4d2eee5717580b03b503beef09c41f3695344f",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/encoder/resnet.py",
+      "source_sha256": "f77ca2527bf8628f87477a8617315325db666f84e9a4be83eaf921f2f360a2d3",
+      "public_path": "src/soccer_segmentation/models/encoder/resnet.py",
+      "public_sha256": "f77ca2527bf8628f87477a8617315325db666f84e9a4be83eaf921f2f360a2d3",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/encoder/vgg.py",
+      "source_sha256": "1b911d6b44d892330356b4d5831358943c66169785436d52ac2232612c58d029",
+      "public_path": "src/soccer_segmentation/models/encoder/vgg.py",
+      "public_sha256": "1b911d6b44d892330356b4d5831358943c66169785436d52ac2232612c58d029",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/models/encoder_decoder.py",
+      "source_sha256": "bb6f129b7c31e0d5cbc6888c0beb66827357fe3882190af3e56e591aa5475ac7",
+      "public_path": "src/soccer_segmentation/models/encoder_decoder.py",
+      "public_sha256": "bb6f129b7c31e0d5cbc6888c0beb66827357fe3882190af3e56e591aa5475ac7",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/supported_models.py",
+      "source_sha256": "6e9b104d98d10f6e828db19b5f9adb4d30267e4729e11e125e9e933ebcf8b7b0",
+      "public_path": "src/soccer_segmentation/supported_models.py",
+      "public_sha256": "6e9b104d98d10f6e828db19b5f9adb4d30267e4729e11e125e9e933ebcf8b7b0",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/train.py",
+      "source_sha256": "b3ecb9e38cf3c4f0b798cba68feb10fb90565e53ecc49f12d7d7ad17aeab257e",
+      "public_path": "src/soccer_segmentation/train.py",
+      "public_sha256": "b3ecb9e38cf3c4f0b798cba68feb10fb90565e53ecc49f12d7d7ad17aeab257e",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/utils/checkpoint.py",
+      "source_sha256": "112a9d9cfe493a1568f8e735dbb91f372ab7be7beb5e527c56afa87ba2c2fa5f",
+      "public_path": "src/soccer_segmentation/utils/checkpoint.py",
+      "public_sha256": "112a9d9cfe493a1568f8e735dbb91f372ab7be7beb5e527c56afa87ba2c2fa5f",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/utils/early_stopping.py",
+      "source_sha256": "24a11bb7318d0684892461d0f0e0dbb0585e98b2a6a26a783557981586cc19ec",
+      "public_path": "src/soccer_segmentation/utils/early_stopping.py",
+      "public_sha256": "24a11bb7318d0684892461d0f0e0dbb0585e98b2a6a26a783557981586cc19ec",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "humanoid-field-segmentation/soccer_segmentation/visualize.py",
+      "source_sha256": "52e3090ef305bc6b55a5d974bb29273bcf369fe0eea238cfe2cb0574e6a04c19",
+      "public_path": "src/soccer_segmentation/visualize.py",
+      "public_sha256": "52e3090ef305bc6b55a5d974bb29273bcf369fe0eea238cfe2cb0574e6a04c19",
+      "changes": "byte content preserved apart from newline encoding"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/scenario_capture_node.py",
+      "source_sha256": "f79365d2dd4b8987869a4f4b61e2c0efdc83eca780c4044611989a983613fa48",
+      "public_path": "simulation/ros/scenario_capture_node.py",
+      "public_sha256": "7b1218daf572829712888dd42c3b27f46e9a8f3317a156fed635d4a4e66e4c0c",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/generate_synthetic_gt.py",
+      "source_sha256": "fa765833a88062a3009930509ac6d00907a774bd0a4e69a6a9680b6a692c8c47",
+      "public_path": "simulation/ros/generate_synthetic_gt.py",
+      "public_sha256": "dd542697d023b81095e9bde945f42707ea7c2423005cd10f83a6e12e435e652d",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/prompt94_walker_node.py",
+      "source_sha256": "daee7b3ae07bb63222b33cef3faca46862aa6e52f49ed7930c4c490986cc91cc",
+      "public_path": "simulation/ros/walker_node.py",
+      "public_sha256": "69fe1ce4a4dc57a547894e1aaa20fcf57eb0a5d6f82e199082a56c3b5baabc5c",
+      "changes": "mechanical replacements"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/train_field_transfer.py",
+      "source_sha256": "a1a892a7536cb28f3583e1a14acb866455272961032ae09294ea8d919fe7ea0a",
+      "public_path": "src/robocup_perception/multitask/train_field_transfer.py",
+      "public_sha256": "1cd0f1b74c2915509228989a42398a71e7cfc07b6540b0a5f7df7eaab7a761e9",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/MTL_R1_RESEARCH_HANDOFF/portable/EF-KD-S101_architecture.yaml",
+      "source_sha256": "45b0708047aeeb33382ec60b7c817e0ae0906196757cf71bc5a9b0a18b8e04f2",
+      "public_path": "configs/multitask/efficient-sharing.yaml",
+      "public_sha256": "45b0708047aeeb33382ec60b7c817e0ae0906196757cf71bc5a9b0a18b8e04f2",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "post_consolidation_research/MTL-R1/development_extension_20260913/MTL_R1_RESEARCH_HANDOFF/portable/J-KD-S101_architecture.yaml",
+      "source_sha256": "40b20bb7383b5d15e6e0e278adb568d07a1064692906541ed8380ede20f401a7",
+      "public_path": "configs/multitask/joint-sharing.yaml",
+      "public_sha256": "40b20bb7383b5d15e6e0e278adb568d07a1064692906541ed8380ede20f401a7",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/prompt94_detector_adapter.py",
+      "source_sha256": "1747720e946c14e64beeefda26ef93771e0b4f5dfe5c6d5a1d3c4dbe22214b94",
+      "public_path": "simulation/ros/detector_adapter.py",
+      "public_sha256": "a49c7e921c019a7bb8d97daf84258af821ddffbb74b11209ce3c5f6f28f1e7fe",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/replay_runner.py",
+      "source_sha256": "083cdb8c490ce114e927f2923dbefe2d0c63a679ba753c361c7d75e190f2cae9",
+      "public_path": "simulation/ros/replay_runner.py",
+      "public_sha256": "72e12d213b191d13057c84dbff8772188db2002fd679e093c286ea3b90f5efeb",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/integration/YOLOv8Infer_prompt94.patch",
+      "source_sha256": "218312b75d1b3153a41bb88cb001c87c1d00cb6fd7b5da9b925fd472370b7a70",
+      "public_path": "simulation/patches/detector-overlay.patch",
+      "public_sha256": "71aaa34f6f76631f130892925d611578724b90c7460b48b08e851cd194ba2d18",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/integration/YOLOv8Infer_prompt94_cpp_timing.patch",
+      "source_sha256": "b91351645d13e558d83bf866348af80504eb2a2b9026de19756c94a8b91b21b8",
+      "public_path": "simulation/patches/detector-timing.patch",
+      "public_sha256": "af7f75f788b06eec4fac12c1e939b9fbd541a3f2f4127f71393a37eeee35ac14",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/integration/GazeboSoccerPlayer_prompt94_perception_only.patch",
+      "source_sha256": "44555cd980c9622d102548535b0e12b0241585f499bbcb8b6121b84dde77fc7f",
+      "public_path": "simulation/patches/perception-only-player.patch",
+      "public_sha256": "31aec1b87ffc3cbbd30c1c8ed68cd1290feae4ae61f177be604d29c5d0c0dee8",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/configs/scenarios.json",
+      "source_sha256": "6fab39a53ad5c20456c31b1a3eb7af202aa837c193fa8164fa5ab54d6febb2df",
+      "public_path": "simulation/scenarios/vision-suite.json",
+      "public_sha256": "b4c3ffd391c0b12f8e809178f1da644c7044cde1d359aae62374efea1468e48a",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/configs/detectors.json",
+      "source_sha256": "dc896cbd8a13e4a79c74ee30e656442b7d0132d4bfc572676e12f747addd091b",
+      "public_path": "simulation/configs/detectors.json",
+      "public_sha256": "bc6648b71130d2ca18313ba7ae9bf2c90462cf2c7e2d610f9972b6e79b019f05",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/minimal_camera.sdf",
+      "source_sha256": "27e80215c56d02557be3be27ae2f3519d1f437d5e7c20f100e717d77e840c931",
+      "public_path": "simulation/gazebo/minimal_camera.sdf",
+      "public_sha256": "e50cc4808f7317d8679b2ef2c61e8411176d768481ab43973b045590e0ff48bb",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt94_gazebo_20260814_continuation/runtime/minimal_camera_world.sdf",
+      "source_sha256": "12e73a69b1c0c17d64fa8194e8c5015ea187273f59981d0e8d83e2fdb80ad181",
+      "public_path": "simulation/gazebo/minimal_camera_world.sdf",
+      "public_sha256": "cfa89fc9f903c4e88982d580f3ad9b3281ee387821abd199a151db7bd70f0087",
+      "changes": "mechanical public naming, imports and configuration paths"
+    },
+    {
+      "source": "experiments/prompt82_lightweight_field_union_cpu/scripts/run_prompt82.py",
+      "source_sha256": "4433f5edc0987c64d52cb71fa4e2ecd4c9f721a2bba21d206eea6a97abe61bc8",
+      "public_path": "src/robocup_perception/segmentation/field_models.py",
+      "public_sha256": "aa979662c165b93ad6710079dc48498bd9b4dc7fcd19185ff80f775f88fd15ba",
+      "changes": "Pure architecture/metric definitions extracted unchanged; imports made explicit. No archive orchestration."
+    },
+    {
+      "source": "experiments/prompt93_roboflow_six_class_detector/scripts/prompt93_phaseb_master.py",
+      "source_sha256": "da48e90fd1f980ae8a2087fc4fcc5e05b9665b490080b2f6c9ab822656f9bd7e",
+      "public_path": "src/robocup_perception/detection/metrics.py",
+      "public_sha256": "e2de82b7c906a93a3b6bbd6bffadce5d9ad4b34b18f19b2551dbaae4f6560947",
+      "changes": "Pure architecture/metric definitions extracted unchanged; imports made explicit. No archive orchestration."
+    }
+  ],
+  "report_sources": [
+    {
+      "id": "audit",
+      "path": "experiments/full2000_segmentation_retrain_prompt73A/NEAR_DUPLICATE_AND_SEQUENCE_AUDIT.md",
+      "title": "Audit des séquences et quasi-doublons",
+      "evidence_class": "protocol_audit",
+      "sha256": "a9aed19eb16bceb40370d2d51292c147fd7b00954b3a671f46f6f1a5b0df72fa",
+      "public_report": "docs/reports/sequence-leakage-and-near-duplicate-audit.md"
+    },
+    {
+      "id": "lines",
+      "path": "experiments/full2000_segmentation_retrain_prompt73A/FINAL_ONLY_FULL2000_EVALUATION_REPORT.md",
+      "title": "Segmentation explicite des lignes : évaluation finale corrigée",
+      "evidence_class": "real_final_report_only",
+      "sha256": "69840a2ac35ddd4b26628d5f2574ab32ae74e3a1771cd316a86da61895f09270",
+      "public_report": "docs/reports/three-class-field-and-line-segmentation.md"
+    },
+    {
+      "id": "field",
+      "path": "experiments/prompt91_full_torso_binary_field_union/reports/PROMPT91_FINAL_REPORT.md",
+      "title": "Segmentation binaire du terrain : comparaison MobileNet et Fast-SCNN",
+      "evidence_class": "open_development_77",
+      "sha256": "d19a2464041f8c435648342a91de2c092eaeb7990c8b5b0f88129a256511ab95",
+      "public_report": "docs/reports/binary-field-segmentation.md"
+    },
+    {
+      "id": "nucfield",
+      "path": "experiments/prompt92_nuc_fp32_post85_20260806T150000Z/reports/PROMPT92_ACTUAL_NUC_FP32_PARETO_REPORT.md",
+      "title": "Mesures FP32 des segmentations sur Intel NUC",
+      "evidence_class": "actual_nuc_runtime",
+      "sha256": "e363d665c2ca10bc12f649f61103de5d942e355178ec5b4d668bd1fc7c994303",
+      "public_report": "docs/reports/intel-nuc-segmentation-benchmark.md"
+    },
+    {
+      "id": "det",
+      "path": "experiments/prompt93_roboflow_six_class_detector/final_packages/prompt93_phaseb_20260813_terminal/PROMPT93_FINAL_REPORT.md",
+      "title": "Comparaison contrôlée YOLOv8n et YOLO26n",
+      "evidence_class": "real_sealed_test_report_only",
+      "sha256": "0e1aa72434cab89568390b40d4b3136870c3adc0780c2b5af3f71baa2883a4c4",
+      "public_report": "docs/reports/controlled-yolov8n-yolo26n-comparison.md"
+    },
+    {
+      "id": "nucdet",
+      "path": "experiments/prompt93_n1_actual_chape_nuc_20260826/reports/PROMPT93_NUC_FINAL_REPORT.md",
+      "title": "Benchmark des détecteurs sur Chape",
+      "evidence_class": "actual_nuc_runtime",
+      "sha256": "bffec333e867267867ed8a753e06a9c4e64d367a0184d4267ec82ba52e51d19c",
+      "public_report": "docs/reports/intel-nuc-detector-benchmark.md"
+    },
+    {
+      "id": "scale",
+      "path": "experiments/prompt95_multitask_data_scale_closure/PROMPT95_FINAL_REPORT.md",
+      "title": "Étude de volume de supervision multitâche",
+      "evidence_class": "open_development_77_historical",
+      "sha256": "054499e27df9bf94ec82ab1f8e3a2929216d3e6a8fbee898cfa7c34a1fceaae2",
+      "public_report": "docs/reports/multitask-supervision-scale-study.md"
+    },
+    {
+      "id": "mtl",
+      "path": "post_consolidation_research/MTL-R1/development_extension_20260913/FINAL_REPORT.md",
+      "title": "Partage sélectif et contexte privé : résultats et contrôles",
+      "evidence_class": "exposed_development_matched",
+      "sha256": "e8d371b281078290c1c37c98373aa8d079fa010600686ff746f7c4aa9302fbd4",
+      "public_report": "docs/reports/selective-sharing-multitask-perception.md"
+    },
+    {
+      "id": "ball",
+      "path": "experiments/prompt89_prompt94_continuation_20260814/reports/PROMPT89_PROMPT94_CONTINUATION_FINAL_REPORT.md",
+      "title": "Contexte terrain et sélection de balle en simulation",
+      "evidence_class": "gazebo_stress_and_untouched_replay",
+      "sha256": "58a2772312c5b8b38d711830c037fcb592add6bdd42db7add590f799f997b756",
+      "public_report": "docs/reports/deterministic-gazebo-perception-benchmark.md"
+    },
+    {
+      "id": "sim",
+      "path": "experiments/prompt94_gazebo_20260814_continuation/PROMPT94_GAZEBO_VISION_BENCHMARK_REPORT.md",
+      "title": "Rejeu déterministe Gazebo et quatre détecteurs",
+      "evidence_class": "gazebo_synthetic_gt",
+      "sha256": "adbb6e7e79a4ee294aa55321227fe4bb3491692cd590c774c322bdd084835960",
+      "public_report": "docs/reports/field-context-ball-selection.md"
+    },
+    {
+      "id": "causal",
+      "path": "experiments/prompt88_r2_typed_landmark_association_20260823/reports/FINAL_SCIENTIFIC_REPORT.md",
+      "title": "Décomposition mesure / identité / association",
+      "evidence_class": "gazebo_oracle_diagnostic",
+      "sha256": "3f9d8ff769c416b2ba77849bad6c147fbbe6d1c64c2d5dcfdc0dacde09c9a820",
+      "public_report": "docs/reports/typed-landmark-localization.md"
+    },
+    {
+      "id": "fix",
+      "path": "final_consolidation_20260831/04_SOFTWARE_HANDOFF/localizer_patch/FINAL_ENGINEERING_REPORT.md",
+      "title": "Correction isolée du modèle d'observation C++",
+      "evidence_class": "code_and_gazebo_runtime",
+      "sha256": "a1602e201a3bf588ab06b2904e1ad9043450272e05d3e72d4006dd7e349fcf73",
+      "public_report": "docs/reports/cpp-observation-likelihood-correction.md"
+    },
+    {
+      "id": "chape",
+      "path": "final_consolidation_20260831/04_SOFTWARE_HANDOFF/localizer_patch/REAL_CHAPE_LANDMARK_RICH_RUNTIME_REGRESSION_ADDENDUM.md",
+      "title": "Régression réelle Chape avec observations d'amers",
+      "evidence_class": "real_runtime_only",
+      "sha256": "e3a7e96052d63a73271e3149a06415f4e22c3875309c0094367b268f7d9766e5",
+      "public_report": "docs/reports/chape-landmark-runtime-regression.md"
+    },
+    {
+      "id": "sensor",
+      "path": "post_consolidation_research/LOC-R2-SENSOR/FINAL_SCIENTIFIC_REPORT.md",
+      "title": "Localisation avec association souple et support de cap",
+      "evidence_class": "gazebo_frozen_final",
+      "sha256": "026d14e87044a334bb99916c6866d01eb78dbc6c73b7f5347fa3bcc8d8eec00e",
+      "public_report": "docs/reports/sensor-aided-localization.md"
+    },
+    {
+      "id": "lineobs",
+      "path": "post_consolidation_research/LOC-R5-LINE-CONSTRAINT/REPORT.md",
+      "title": "Test causal de contraintes de lignes mesurées",
+      "evidence_class": "gazebo_reused_development",
+      "sha256": "bd92041c521696ae0154b512422c60f85f836430041581c354e7b5128e8e3500",
+      "public_report": "docs/reports/measured-line-localization.md"
+    },
+    {
+      "id": "obs",
+      "path": "post_consolidation_research/LOC-OBSERVABILITY-AUDIT_20260922/AUDIT.md",
+      "title": "Observabilité et symétrie du terrain",
+      "evidence_class": "source_audit",
+      "sha256": "698e8c2b4cc11e04fb0f8be154302d68cfcdba4ae846117bb9c00e592f59bd27",
+      "public_report": "docs/reports/map-observability-and-symmetry.md"
+    }
+  ]
+}

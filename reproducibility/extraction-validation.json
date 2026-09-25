@@ -1,0 +1,35 @@
+{
+  "scope": "Synthetic load/forward and source AST checks only; no accuracy or performance experiment",
+  "selected_checkpoints": [
+    {
+      "model": "joint",
+      "state_dict": "strict load passed",
+      "finite": true,
+      "both_outputs_input_dependent": true
+    },
+    {
+      "model": "efficient",
+      "state_dict": "strict load passed",
+      "finite": true,
+      "both_outputs_input_dependent": true
+    }
+  ],
+  "extracted_definitions": [
+    {
+      "file": "src/robocup_perception/segmentation/field_models.py",
+      "algorithmic_definitions_ast_identical": true
+    },
+    {
+      "file": "src/robocup_perception/detection/metrics.py",
+      "algorithmic_definitions_ast_identical": true
+    },
+    {
+      "file": "src/robocup_perception/ball_selection/features.py",
+      "algorithmic_definitions_ast_identical": true
+    },
+    {
+      "file": "src/robocup_perception/ball_selection/scoring.py",
+      "algorithmic_definitions_ast_identical": true
+    }
+  ]
+}

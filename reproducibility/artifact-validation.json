@@ -1,0 +1,157 @@
+{
+  "scope": "Existing model hashes and metadata only; no accuracy or latency evaluation",
+  "archive_checks": [
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "best.pt",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "multitask.bin",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "multitask.onnx",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "multitask.xml",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "native/multitask.bin",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "native/multitask.onnx",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-efficient-sharing",
+      "file": "native/multitask.xml",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-joint-sharing",
+      "file": "best.pt",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-joint-sharing",
+      "file": "multitask.bin",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-joint-sharing",
+      "file": "multitask.onnx",
+      "archive_hash_verified": true
+    },
+    {
+      "model": "multitask-joint-sharing",
+      "file": "multitask.xml",
+      "archive_hash_verified": true
+    }
+  ],
+  "metadata_checks": [
+    {
+      "file": "detector-historical-320\\model.onnx",
+      "keys": [
+        "description",
+        "author",
+        "date",
+        "version",
+        "license",
+        "docs",
+        "stride",
+        "task",
+        "head",
+        "batch",
+        "imgsz",
+        "names",
+        "args",
+        "channels",
+        "end2end"
+      ],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "detector-yolo26n-640\\model.onnx",
+      "keys": [
+        "description",
+        "author",
+        "date",
+        "version",
+        "license",
+        "docs",
+        "stride",
+        "task",
+        "head",
+        "batch",
+        "imgsz",
+        "names",
+        "args",
+        "channels",
+        "end2end"
+      ],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "detector-yolov8n-640\\model.onnx",
+      "keys": [
+        "description",
+        "author",
+        "date",
+        "version",
+        "license",
+        "docs",
+        "stride",
+        "task",
+        "head",
+        "batch",
+        "imgsz",
+        "names",
+        "args",
+        "channels",
+        "end2end"
+      ],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "field-fast-scnn\\model.onnx",
+      "keys": [],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "field-line-reference\\model.onnx",
+      "keys": [],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "field-mobilenet\\model.onnx",
+      "keys": [],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "multitask-efficient-sharing\\multitask.onnx",
+      "keys": [],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "multitask-joint-sharing\\multitask.onnx",
+      "keys": [],
+      "private_path_scan": "passed"
+    },
+    {
+      "file": "multitask-efficient-sharing\\native\\multitask.onnx",
+      "keys": [],
+      "private_path_scan": "passed"
+    }
+  ],
+  "deck_pdf_pages": 10,
+  "report_pdf_documents": 17
+}
