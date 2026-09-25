@@ -1,0 +1,51 @@
+diff --git a/source/core/modeling/vision/CNN/YOLOv8Infer.cpp b/source/core/modeling/vision/CNN/YOLOv8Infer.cpp
+index 6acfd931..ca8683d6 100644
+--- a/source/core/modeling/vision/CNN/YOLOv8Infer.cpp
++++ b/source/core/modeling/vision/CNN/YOLOv8Infer.cpp
+@@ -5,6 +5,7 @@
+ #include "YOLOv8Infer.h"
+ 
+ #include <pybind11/numpy.h>
++#include <cstdlib>
+ 
+ namespace modeling {
+ namespace vision {
+@@ -71,8 +72,13 @@ YOLOv8Infer::YOLOv8Infer() {
+     if (!modulesInitialized) {
+         auto sys = py::module::import("sys");
+         sys.attr("path").attr("append")("../source/core/modeling/vision/CNN");
+-        module = pybind11::module::import("yolov8_detector");
+-        detector = module.attr("YOLOv8Detector")("../configuration/core/modeling/vision/yolo/reality_yolov8.xml");
++        const char *registry = std::getenv("PERCEPTION_DETECTOR_REGISTRY");
++        const char *detectorId = std::getenv("PERCEPTION_DETECTOR_ID");
++        if (registry == nullptr || detectorId == nullptr) {
++            throw std::runtime_error("deterministic replay requires PERCEPTION_DETECTOR_REGISTRY and PERCEPTION_DETECTOR_ID");
++        }
++        module = pybind11::module::import("detector_adapter");
++        detector = module.attr("DetectorAdapter")(registry, detectorId);
+         modulesInitialized = true;
+     }
+ 
+@@ -88,8 +94,6 @@ YOLOv8Infer::~YOLOv8Infer() {
+ }
+ 
+ CNNOutput YOLOv8Infer::run(const cv::Mat &rgbImage) {
+-    static cv::Mat bgrImage;
+-
+     static const int LEFT = 0;
+     static const int TOP = 1;
+     static const int RIGHT = 2;
+@@ -99,9 +103,10 @@ CNNOutput YOLOv8Infer::run(const cv::Mat &rgbImage) {
+ 
+     py::gil_scoped_acquire acquire;
+ 
+-    cv::cvtColor(rgbImage, bgrImage, cv::COLOR_RGB2BGR);
+-
+-    py::array imageArray = mat_to_nparray(bgrImage);
++    // The adapter owns the per-model color contract. Passing RGB here avoids
++    // forcing historical native-320 study through the deployed YOLOv8-v2 BGR tensor quirk.
++    cv::Mat continuousRgb = rgbImage.isContinuous() ? rgbImage : rgbImage.clone();
++    py::array imageArray = mat_to_nparray(continuousRgb);
+ 
+     pybind11::array_t<double> detections = detector.attr("detect")(imageArray);
+ //    for (int i = 0; i < detections.shape(0); ++i) {

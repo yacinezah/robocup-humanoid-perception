@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "classes": [
+    "ball",
+    "goalpost",
+    "robot",
+    "L-intersection",
+    "T-intersection",
+    "X-intersection"
+  ],
+  "cpp_wrapper_contract": {
+    "source": "source/core/modeling/vision/CNN/YOLOv8Infer.h and YOLOv8Infer.cpp at frozen commit",
+    "confidence": 0.25,
+    "selection": "first ball, first two goalposts, all robots and typed intersections in detector order"
+  },
+  "detectors": [
+    {
+      "id": "production_reality_yolov8_v2_fp32_640",
+      "enabled": true,
+      "role": "exact_deployed_baseline",
+      "format": "openvino_ir_fp32",
+      "xml": "artifacts/detectors/production_reality_yolov8_v2_fp32_640/model.xml",
+      "bin": "artifacts/detectors/production_reality_yolov8_v2_fp32_640/model.bin",
+      "input_shape": [1, 3, 640, 640],
+      "output_shape": [1, 10, 8400],
+      "camera_input_color": "RGB",
+      "model_tensor_color": "BGR",
+      "preprocess": "team_yolov8_letterbox_640_pad114_stride32_no_scaleup_nchw_fp32_div255",
+      "decoder": "ultralytics_8_3_139_non_max_suppression_nc6",
+      "confidence": 0.25,
+      "nms_iou": 0.7,
+      "class_agnostic_nms": false,
+      "max_detections": 300,
+      "post_wrapper_production_thresholds_reference_not_applied_in_perception_cpp_wrapper": {
+        "ball": 0.3,
+        "goalpost": 0.3,
+        "robot": 0.6,
+        "L-intersection": 0.3,
+        "T-intersection": 0.3,
+        "X-intersection": 0.3
+      },
+      "artifact_sha256": {
+        "model.xml": "7cd8046cde6924cc88da6fa7e4d71cf06af7a41207c1e8169fcd6664dab4f65e",
+        "model.bin": "71f06b93908265c5b84b3985cd792142ae47256bd552cdfe224fce048cc4aa87"
+      },
+      "source": "Audited production reference; obtain separately from the team"
+    },
+    {
+      "id": "historical_yolo26n_320",
+      "enabled": true,
+      "role": "current_yolo26_candidate",
+      "format": "openvino_ir_fp32",
+      "xml": "artifacts/detectors/historical_yolo26n_320/model.xml",
+      "bin": "artifacts/detectors/historical_yolo26n_320/model.bin",
+      "input_shape": [1, 3, 320, 320],
+      "output_shape": [1, 300, 6],
+      "camera_input_color": "RGB",
+      "model_tensor_color": "RGB",
+      "preprocess": "historical_letterbox_320_pad114_stride32_nchw_fp32_div255",
+      "decoder": "yolo26_end2end_nms_free_xyxy_score_class_rescale_from_letterbox",
+      "confidence": 0.375,
+      "nms_iou": null,
+      "class_agnostic_nms": null,
+      "max_detections": 300,
+      "downstream_thresholds": null,
+      "artifact_sha256": {
+        "model.xml": "78543e423c9af9ff97bc5a4efd24aca5ef4ef67f15f2f293be34ba11ed948378",
+        "model.bin": "6ec0a423d54870bb1a54afd178679ebc070f98f724b517f0f560303bbbb340cb"
+      },
+      "source": "historical native-320 study canonical native-320 OpenVINO export"
+    },
+    {
+      "id": "controlled_yolov8n_640",
+      "enabled": true,
+      "role": "same_data_controlled_accuracy_leader",
+      "format": "openvino_ir_fp32",
+      "xml": "artifacts/detectors/controlled_yolov8n_640/model.xml",
+      "bin": "artifacts/detectors/controlled_yolov8n_640/model.bin",
+      "input_shape": [1, 3, 640, 640],
+      "output_shape": [1, 10, 8400],
+      "camera_input_color": "RGB",
+      "model_tensor_color": "RGB",
+      "preprocess": "ultralytics_letterbox_640_pad114_auto_false_scaleup_true_nchw_fp32_div255",
+      "decoder": "ultralytics_class_aware_nms_nc6",
+      "confidence": 0.25,
+      "raw_candidate_floor": 0.05,
+      "nms_iou": 0.7,
+      "class_agnostic_nms": false,
+      "max_detections": 300,
+      "downstream_thresholds": null,
+      "checkpoint_sha256": "e929db88132462c50c0bb8e0cb5e7e6bb61e35d398247199a5c58aa33b275cb6",
+      "artifact_sha256": {
+        "model.xml": "0b467f11861fd9084771796ca040f68fa4491e25afd76c0eb69db41f825f56c6",
+        "model.bin": "b885414ab4e11c69281f005084b1379196591b28a7dcbd529239a240ecbf7ff8"
+      },
+      "parity_status": "operational_count_class_box_confidence_parity_pass__frozen_raw_absolute_error_gate_failed",
+      "source": "controlled detector study representative P93-Y8N-640-S930 terminal OpenVINO package"
+    },
+    {
+      "id": "controlled_yolo26n_640",
+      "enabled": true,
+      "role": "same_data_controlled_yolo26_representative",
+      "format": "openvino_ir_fp32",
+      "xml": "artifacts/detectors/controlled_yolo26n_640/model.xml",
+      "bin": "artifacts/detectors/controlled_yolo26n_640/model.bin",
+      "input_shape": [1, 3, 640, 640],
+      "output_shape": [1, 300, 6],
+      "camera_input_color": "RGB",
+      "model_tensor_color": "RGB",
+      "preprocess": "ultralytics_letterbox_640_pad114_auto_false_scaleup_true_nchw_fp32_div255",
+      "decoder": "yolo26_end2end_nms_free_xyxy_score_class_rescale_from_letterbox",
+      "confidence": 0.25,
+      "raw_candidate_floor": 0.05,
+      "nms_iou": null,
+      "class_agnostic_nms": null,
+      "max_detections": 300,
+      "downstream_thresholds": null,
+      "checkpoint_sha256": "3a3dbe1f07aad96f03b42d64bd564eae39ef0a087ca4394bb855737a669df845",
+      "artifact_sha256": {
+        "model.xml": "dd2bec12ec493b95cee2119c65a4fbf5eb1eeca356b81a66ec23b588f892a843",
+        "model.bin": "beca2874bee21f373a9e0048b3697d5cdda05eb038211bc4672c7c52984250fc"
+      },
+      "parity_status": "operational_count_class_box_confidence_parity_pass__frozen_raw_order_sensitive_gate_failed",
+      "source": "controlled detector study representative P93-Y26N-640-S931 terminal OpenVINO package"
+    }
+  ],
+  "future_modules": {
+    "fast_scnn_field": {"enabled": false, "hook": "field_segmentation"},
+    "mobilenet_field": {"enabled": false, "hook": "field_segmentation"},
+    "field_context_ball_filter": {"enabled": false, "hook": "post_detector_filter"},
+    "typed_landmark_localization": {"enabled": false, "hook": "junction_localization"}
+  }
+}

@@ -1,0 +1,22 @@
+diff --git a/source/core/agent/GazeboSoccerPlayer.cpp b/source/core/agent/GazeboSoccerPlayer.cpp
+index 0797778..57a93a2 100644
+--- a/source/core/agent/GazeboSoccerPlayer.cpp
++++ b/source/core/agent/GazeboSoccerPlayer.cpp
+@@ -4,6 +4,7 @@
+ //
+ 
+ #include <ros/ros.h>
++#include <cstdlib>
+ #include <opencv2/core/core.hpp>
+ #include <opencv2/highgui/highgui.hpp>
+ #include <thread>
+@@ -157,5 +158,9 @@ void GazeboSoccerPlayer::cognitionStep(const sensor_msgs::Image::ConstPtr &image
+     communication->processImage(imageMsg);
+     perception->see(*communication.get());
+     modeling->modelCognition(*perception.get(), *control.get());
++    // deterministic replay measures the real camera -> player -> modeling/vision -> detector
++    // path without entering the frozen decision/motion synchronization.
++    // Normal behavior is unchanged unless the benchmark explicitly opts in.
++    if (std::getenv("PERCEPTION_PERCEPTION_ONLY") != nullptr) return;
+     decisionMaking->decide(*modeling.get());
+ //    decisionMaking->movementRequest = std::make_shared<control::request::WalkRequest>(itandroids_lib::math::Pose2D(0, 0.1, 0));

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "suite_id": "perception_gazebo_deterministic_v1",
+  "seed": 940031,
+  "simulator": "gazebo11_ros_noetic",
+  "world": "robocup2023.world",
+  "camera": {
+    "topic": "/darwin/camera/image_raw",
+    "frame_rate_hz": 30,
+    "width": 640,
+    "height": 480,
+    "horizontal_fov_rad": 1.0123,
+    "near_m": 0.001,
+    "far_m": 100.0,
+    "distortion": "none",
+    "urdf_sensor_pose_xyz_m": [0.0144, 0.0, 0.06302]
+  },
+  "capture": {
+    "warmup_frames": 30,
+    "frames_per_static_scenario": 90,
+    "timestamp_source": "ros_header_stamp_and_gazebo_sim_time",
+    "required_state": ["robot_pose", "head_pan", "head_tilt", "ball_pose", "opponent_poses", "camera_info"],
+    "replay_order": "scenario_id_then_frame_index"
+  },
+  "scenarios": [
+    {"id":"s01_normal_field_static","kind":"static","duration_s":3,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.35},"objects":{},"gt":"PIPELINE_BEHAVIOR_ONLY","covers":["stationary","normal_field_view"]},
+    {"id":"s02_head_pan_sweep","kind":"trajectory","duration_s":8,"robot_pose":[0,0,0],"head":{"pan_keyframes":[[-1.2,0],[1.2,4],[-1.2,8]],"tilt":-0.35},"objects":{"ball":[2.0,0.0,0.075]},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["head_pan_sweep","temporal"]},
+    {"id":"s03_head_tilt_sweep","kind":"trajectory","duration_s":6,"robot_pose":[0,0,0],"head":{"pan":0,"tilt_keyframes":[[-0.75,0],[0.10,3],[-0.75,6]]},"objects":{"ball":[1.5,0.0,0.075]},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["head_tilt_sweep","difficult_orientation","temporal"]},
+    {"id":"s04_ball_near","kind":"static","duration_s":3,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.55},"objects":{"ball":[0.55,0.0,0.075]},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["ball_near"]},
+    {"id":"s05_ball_far_small","kind":"static","duration_s":3,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.25},"objects":{"ball":[5.5,0.0,0.075]},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["ball_far","small_apparent_ball"]},
+    {"id":"s06_ball_image_border","kind":"trajectory","duration_s":5,"robot_pose":[0,0,0],"head":{"pan_keyframes":[[-0.75,0],[-0.2,5]],"tilt":-0.4},"objects":{"ball":[2.0,1.2,0.075]},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["ball_image_border","temporal"]},
+    {"id":"s07_ball_field_border_outside","kind":"trajectory","duration_s":6,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.35},"objects":{"ball_keyframes":[[[4.35,0,0.075],0],[[5.0,0,0.075],6]]},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["ball_playable_border","ball_outside_field","temporal"]},
+    {"id":"s08_ball_occlusion","kind":"trajectory","duration_s":6,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.35},"objects":{"ball":[3.0,0,0.075],"opponent":[1.7,0,0]},"gt":"PIPELINE_BEHAVIOR_ONLY","covers":["robot_occlusion","reacquisition"],"reason":"visible ball support cannot be exact without depth/semantic rendering"},
+    {"id":"s09_goalpost_border","kind":"trajectory","duration_s":5,"robot_pose":[0,0,0],"head":{"pan_keyframes":[[0.15,0],[0.75,5]],"tilt":-0.2},"objects":{},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["goalpost_image_border","temporal"]},
+    {"id":"s10_goalpost_truncated","kind":"static","duration_s":3,"robot_pose":[3.6,0,0],"head":{"pan":0.75,"tilt":-0.05},"objects":{},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["partial_goalpost","truncated_goalpost"]},
+    {"id":"s11_l_junction","kind":"static","duration_s":3,"robot_pose":[-2.5,-1.5,0],"head":{"pan":0.35,"tilt":-0.55},"objects":{},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["L_junction"]},
+    {"id":"s12_t_junction","kind":"static","duration_s":3,"robot_pose":[-3.0,0,0],"head":{"pan":0,"tilt":-0.55},"objects":{},"gt":"SYNTHETIC_GROUND_TRUTH_VALID_CONDITIONAL","covers":["T_junction"]},
+    {"id":"s13_x_junction_audit","kind":"static","duration_s":3,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.7},"objects":{},"gt":"PIPELINE_BEHAVIOR_ONLY","covers":["X_junction"],"reason":"robocup2023 field geometry has no confirmed ontology-valid X crossing"},
+    {"id":"s14_opponent_static","kind":"static","duration_s":3,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.25},"objects":{"opponent":[2.5,0.5,0]},"gt":"PIPELINE_BEHAVIOR_ONLY","covers":["robot_opponent"],"reason":"default Gazebo launch contains no enabled opponent model and link projection/visibility is not implemented"},
+    {"id":"s15_walking_motion","kind":"agent_controlled","duration_s":12,"robot_pose":[0,0,0],"head":{"pan":0,"tilt":-0.35},"objects":{"ball":[3,0,0.075]},"gt":"PIPELINE_BEHAVIOR_ONLY","covers":["walking","motion_blur","temporal"]},
+    {"id":"s16_no_valid_target","kind":"static","duration_s":3,"robot_pose":[0,0,0],"head":{"pan":3.1415926536,"tilt":0.15},"objects":{},"gt":"PIPELINE_BEHAVIOR_ONLY","covers":["no_valid_target","difficult_orientation"]}
+  ]
+}

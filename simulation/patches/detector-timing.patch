@@ -1,0 +1,46 @@
+diff --git a/source/core/modeling/vision/CNN/YOLOv8Infer.cpp b/source/core/modeling/vision/CNN/YOLOv8Infer.cpp
+--- a/source/core/modeling/vision/CNN/YOLOv8Infer.cpp
++++ b/source/core/modeling/vision/CNN/YOLOv8Infer.cpp
+@@ -5,7 +5,11 @@
+ #include "YOLOv8Infer.h"
+ 
+ #include <pybind11/numpy.h>
++#include <chrono>
+ #include <cstdlib>
++#include <fstream>
++#include <iomanip>
++#include <mutex>
+ 
+ namespace modeling {
+ namespace vision {
+@@ -94,6 +98,8 @@ YOLOv8Infer::~YOLOv8Infer() {
+ }
+ 
+ CNNOutput YOLOv8Infer::run(const cv::Mat &rgbImage) {
++    const auto perceptionCppStart = std::chrono::steady_clock::now();
++
+     static const int LEFT = 0;
+     static const int TOP = 1;
+     static const int RIGHT = 2;
+@@ -170,6 +176,21 @@ CNNOutput YOLOv8Infer::run(const cv::Mat &rgbImage) {
+ 
+     py::gil_scoped_release release;
+ 
++    const char *cppTimingPath = std::getenv("PERCEPTION_CPP_TIMING_JSONL");
++    if (cppTimingPath != nullptr) {
++        const auto perceptionCppEnd = std::chrono::steady_clock::now();
++        const double elapsedMs = std::chrono::duration<double, std::milli>(
++                perceptionCppEnd - perceptionCppStart).count();
++        static std::mutex timingMutex;
++        std::lock_guard<std::mutex> guard(timingMutex);
++        std::ofstream timingStream(cppTimingPath, std::ios::app);
++        if (timingStream) {
++            timingStream << "{\"cpp_complete_detector_call_ms\":"
++                         << std::fixed << std::setprecision(6) << elapsedMs
++                         << "}\n";
++        }
++    }
++
+     return output;
+ }
+ 
