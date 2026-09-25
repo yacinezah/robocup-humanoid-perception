@@ -1,0 +1,61 @@
+{
+  "version": "1.0.0",
+  "assets": [
+    {
+      "file": "detector-historical-320-v1.0.0.zip",
+      "bytes": 17042264,
+      "sha256": "475b371709eb2cbdc388f4776fcc415441b784a19444f53c4d50f7bac403d831"
+    },
+    {
+      "file": "detector-yolo26n-640-v1.0.0.zip",
+      "bytes": 17049963,
+      "sha256": "74a3e5b740bcbc3c8f0db2272d941f7af9b7b1c347f0ef27313805ff7574bacc"
+    },
+    {
+      "file": "detector-yolov8n-640-v1.0.0.zip",
+      "bytes": 21116066,
+      "sha256": "18499dd9f3366f4e6746212858aaaa5dd12a8b6daeb62b81be8279e30007029b"
+    },
+    {
+      "file": "engineering-overview-v1.0.0.zip",
+      "bytes": 1256107,
+      "sha256": "8effd175b40cdf89d31e902f3b048861668a99270ddff28fc39078f658ee3326"
+    },
+    {
+      "file": "field-fast-scnn-v1.0.0.zip",
+      "bytes": 1638989,
+      "sha256": "cd5b9e7268dbed52587690567da697df338a601892c47542d1ccd268342cdf31"
+    },
+    {
+      "file": "field-line-reference-v1.0.0.zip",
+      "bytes": 49686864,
+      "sha256": "c41d55cdf225f95ab57e1c6fb7e0c088a169b5927ba98ea99461088c0b010b34"
+    },
+    {
+      "file": "field-mobilenet-v1.0.0.zip",
+      "bytes": 3121459,
+      "sha256": "b997b6e3705dd15d5bfeb5b56820b846d238ef141765919e93e8447a736393c5"
+    },
+    {
+      "file": "multitask-efficient-sharing-v1.0.0.zip",
+      "bytes": 44556939,
+      "sha256": "6050027ffad11775bab18d88d73a71698c5cb0e21272db3b8fee98f037a72c2c"
+    },
+    {
+      "file": "multitask-joint-sharing-v1.0.0.zip",
+      "bytes": 36310258,
+      "sha256": "49d8121489d26a95364a8b81384bdc6091d1fae7682897d7b30c7c9332016f72"
+    },
+    {
+      "file": "observation-likelihood-handoff-v1.0.0.zip",
+      "bytes": 10185,
+      "sha256": "e1c96b07bef44d444600132a42ffb68a64c2d906a277de63a062e7f519a95a59"
+    },
+    {
+      "file": "technical-reports-v1.0.0.zip",
+      "bytes": 49745,
+      "sha256": "698058e1f05518e1a1aa808aef1323171b2d4d8b36b4c2ebb9fd57c265616d8f"
+    }
+  ],
+  "verification": "ZIP CRC and every decompressed member hash verified"
+}

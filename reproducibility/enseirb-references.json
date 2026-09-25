@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "url_policy": "Resolve immutable commit permalinks after publication; null is not a published URL.",
+  "url_policy": "Immutable, verified publication snapshot; school submissions have not been modified.",
   "references": [
     {
       "enseirb_reference": 6,
@@ -8,7 +8,7 @@
       "title": "Sequence Leakage and Near-Duplicate Audit",
       "path": "docs/reports/sequence-leakage-and-near-duplicate-audit.md",
       "source_sha256": "a9aed19eb16bceb40370d2d51292c147fd7b00954b3a671f46f6f1a5b0df72fa",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/sequence-leakage-and-near-duplicate-audit.md"
     },
     {
       "enseirb_reference": 7,
@@ -16,7 +16,7 @@
       "title": "Three-Class Field and Line Segmentation",
       "path": "docs/reports/three-class-field-and-line-segmentation.md",
       "source_sha256": "69840a2ac35ddd4b26628d5f2574ab32ae74e3a1771cd316a86da61895f09270",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/three-class-field-and-line-segmentation.md"
     },
     {
       "enseirb_reference": 8,
@@ -24,7 +24,7 @@
       "title": "Binary Field Segmentation: Quality and Efficiency",
       "path": "docs/reports/binary-field-segmentation.md",
       "source_sha256": "d19a2464041f8c435648342a91de2c092eaeb7990c8b5b0f88129a256511ab95",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/binary-field-segmentation.md"
     },
     {
       "enseirb_reference": 9,
@@ -32,7 +32,7 @@
       "title": "FP32 Segmentation Benchmark on Intel NUC",
       "path": "docs/reports/intel-nuc-segmentation-benchmark.md",
       "source_sha256": "e363d665c2ca10bc12f649f61103de5d942e355178ec5b4d668bd1fc7c994303",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/intel-nuc-segmentation-benchmark.md"
     },
     {
       "enseirb_reference": 10,
@@ -40,7 +40,7 @@
       "title": "Controlled YOLOv8n-YOLO26n Comparison",
       "path": "docs/reports/controlled-yolov8n-yolo26n-comparison.md",
       "source_sha256": "0e1aa72434cab89568390b40d4b3136870c3adc0780c2b5af3f71baa2883a4c4",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/controlled-yolov8n-yolo26n-comparison.md"
     },
     {
       "enseirb_reference": 11,
@@ -48,7 +48,7 @@
       "title": "Detector Benchmark on Intel NUC",
       "path": "docs/reports/intel-nuc-detector-benchmark.md",
       "source_sha256": "bffec333e867267867ed8a753e06a9c4e64d367a0184d4267ec82ba52e51d19c",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/intel-nuc-detector-benchmark.md"
     },
     {
       "enseirb_reference": 12,
@@ -56,7 +56,7 @@
       "title": "Supervision Scale and Representation Limits in Multitask Perception",
       "path": "docs/reports/multitask-supervision-scale-study.md",
       "source_sha256": "054499e27df9bf94ec82ab1f8e3a2929216d3e6a8fbee898cfa7c34a1fceaae2",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/multitask-supervision-scale-study.md"
     },
     {
       "enseirb_reference": 13,
@@ -64,7 +64,7 @@
       "title": "Selective Sharing and Private Semantics for Multitask Perception",
       "path": "docs/reports/selective-sharing-multitask-perception.md",
       "source_sha256": "e8d371b281078290c1c37c98373aa8d079fa010600686ff746f7c4aa9302fbd4",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/selective-sharing-multitask-perception.md"
     },
     {
       "enseirb_reference": 14,
@@ -72,7 +72,7 @@
       "title": "Deterministic Gazebo Perception Benchmark",
       "path": "docs/reports/deterministic-gazebo-perception-benchmark.md",
       "source_sha256": "adbb6e7e79a4ee294aa55321227fe4bb3491692cd590c774c322bdd084835960",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/deterministic-gazebo-perception-benchmark.md"
     },
     {
       "enseirb_reference": 15,
@@ -80,7 +80,7 @@
       "title": "Field-Context Ball Selection and Generalization",
       "path": "docs/reports/field-context-ball-selection.md",
       "source_sha256": "58a2772312c5b8b38d711830c037fcb592add6bdd42db7add590f799f997b756",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/field-context-ball-selection.md"
     },
     {
       "enseirb_reference": 16,
@@ -88,7 +88,7 @@
       "title": "Typed-Landmark Localization: Measurement and Association",
       "path": "docs/reports/typed-landmark-localization.md",
       "source_sha256": "3f9d8ff769c416b2ba77849bad6c147fbbe6d1c64c2d5dcfdc0dacde09c9a820",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/typed-landmark-localization.md"
     },
     {
       "enseirb_reference": 17,
@@ -96,7 +96,7 @@
       "title": "C++ Observation-Likelihood Correction",
       "path": "docs/reports/cpp-observation-likelihood-correction.md",
       "source_sha256": "a1602e201a3bf588ab06b2904e1ad9043450272e05d3e72d4006dd7e349fcf73",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/cpp-observation-likelihood-correction.md"
     },
     {
       "enseirb_reference": 18,
@@ -104,7 +104,7 @@
       "title": "Chape Landmark-Rich Runtime Regression",
       "path": "docs/reports/chape-landmark-runtime-regression.md",
       "source_sha256": "e3a7e96052d63a73271e3149a06415f4e22c3875309c0094367b268f7d9766e5",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/chape-landmark-runtime-regression.md"
     },
     {
       "enseirb_reference": 19,
@@ -112,7 +112,7 @@
       "title": "Sensor-Aided Localization with Typed Landmarks",
       "path": "docs/reports/sensor-aided-localization.md",
       "source_sha256": "026d14e87044a334bb99916c6866d01eb78dbc6c73b7f5347fa3bcc8d8eec00e",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/sensor-aided-localization.md"
     },
     {
       "enseirb_reference": 20,
@@ -120,7 +120,7 @@
       "title": "Measured-Line Constraints for Localization",
       "path": "docs/reports/measured-line-localization.md",
       "source_sha256": "bd92041c521696ae0154b512422c60f85f836430041581c354e7b5128e8e3500",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/measured-line-localization.md"
     },
     {
       "enseirb_reference": 21,
@@ -128,7 +128,8 @@
       "title": "Field-Map Consistency, Observability and Symmetry",
       "path": "docs/reports/map-observability-and-symmetry.md",
       "source_sha256": "698e8c2b4cc11e04fb0f8be154302d68cfcdba4ae846117bb9c00e592f59bd27",
-      "publication_url": null
+      "publication_url": "https://github.com/yacinezah/robocup-humanoid-perception/blob/b9e811c90372aafb4ee603b5076b0074a6b904f8/docs/reports/map-observability-and-symmetry.md"
     }
-  ]
+  ],
+  "publication_commit": "b9e811c90372aafb4ee603b5076b0074a6b904f8"
 }
