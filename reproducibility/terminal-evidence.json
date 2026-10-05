@@ -1,0 +1,64 @@
+{
+  "as_of": "2026-10-04",
+  "scope": "Public summary provenance; source documents are retained in the authorized team archive, not linked as public downloads",
+  "public_summary": "docs/system-and-evidence.md",
+  "sources": [
+    {
+      "study": "SEG-R1",
+      "team_archive_relative_path": "post_consolidation_research/SEG-R1/protocol_v2/TERMINAL_STATE.json",
+      "sha256": "6daa8cfeced56d33addf155416761115c6b13e26aba534e7dd51fdc9aacb8d0e",
+      "bytes": 53628,
+      "decision": "Four fits complete; exposed development and all-data refit distinct; strict raw parity failure retained"
+    },
+    {
+      "study": "DET-R1",
+      "team_archive_relative_path": "post_consolidation_research/DET-R1/handoff/FINAL_REPORT.md",
+      "sha256": "822457c58a6f43f317b3aacdcb8e92d3f908fb7e58a8cf279a230b4bc4e89d13",
+      "bytes": 9614,
+      "decision": "Corrected geometry is quality reference; rectangle CPU tradeoff; material runtime gate not met"
+    },
+    {
+      "study": "DEP-R1",
+      "team_archive_relative_path": "post_consolidation_research/DEP-R1/REPORT.md",
+      "sha256": "ee6302a12757da940ea5db551be1700985d0261df79e578ddd707348af61a666",
+      "bytes": 8112,
+      "decision": "Buffered rectangle + S-compact + sparse32 retained; 8.05 percent gain below 10 percent target"
+    },
+    {
+      "study": "LOC-R6",
+      "team_archive_relative_path": "post_consolidation_research/LOC-R6-SEG-LINES/CURRENT_CHECKPOINT.md",
+      "sha256": "ad991e6f814bf0caa20dfe9847953ac61556ab97729b3da6895d6ea467d98f38",
+      "bytes": 5244,
+      "decision": "Useful sparse measured-line tracking; no superiority or robust global recovery"
+    },
+    {
+      "study": "MTL-R1",
+      "team_archive_relative_path": "post_consolidation_research/MTL-R1/development_extension_20260913/FINAL_REPORT.md",
+      "sha256": "e8d371b281078290c1c37c98373aa8d079fa010600686ff746f7c4aa9302fbd4",
+      "bytes": 13141,
+      "decision": "Later exposed-development continuation supersedes initial blocked Stage A snapshot; research artifacts"
+    },
+    {
+      "study": "MTL-R2",
+      "team_archive_relative_path": "post_consolidation_research/MTL-R2/FINAL_CHECKPOINT.md",
+      "sha256": "8691c67e44b3c644c137da2b9474ed28adc63e4604b136a22befe46be226f44f",
+      "bytes": 3878,
+      "decision": "No specialist-preserving shared Pareto point"
+    },
+    {
+      "study": "MTL-R3",
+      "team_archive_relative_path": "post_consolidation_research/MTL-R3/CURRENT_CHECKPOINT.md",
+      "sha256": "df4031dea0484aa1e25806eb23518d89e5e6d66ab5435a49ecb765c267635584",
+      "bytes": 2542,
+      "decision": "Stage 0 stopped; zero training; untrained connector graphs"
+    },
+    {
+      "study": "MTL-R3.1",
+      "team_archive_relative_path": "post_consolidation_research/MTL-R3.1/TERMINAL_STATE.json",
+      "sha256": "92934e4aaa32f4e40381e0d541ce7d0f9ee8dca47717d785142a5a3eeb8beb13",
+      "bytes": 1045,
+      "decision": "CPU_MEASUREMENT_UNRESOLVED; no training authorization"
+    }
+  ],
+  "no_frame_identities_or_host_paths": true
+}

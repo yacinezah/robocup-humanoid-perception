@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "study": "DEP-R1",
+  "reference": "rect_compact_buffered",
+  "artifacts": {
+    "detector_square": {
+      "xml_sha256": "7cd8046cde6924cc88da6fa7e4d71cf06af7a41207c1e8169fcd6664dab4f65e",
+      "bin_sha256": "71f06b93908265c5b84b3985cd792142ae47256bd552cdfe224fce048cc4aa87",
+      "availability": "Separately authorized ITAndroids handoff only; no binary distributed here"
+    },
+    "segmenter_refit": {
+      "xml_sha256": "c1edd3fd0af8ad51426ab54a11b6e0b26c4cf43edb9f42a770c89d1088451401",
+      "bin_sha256": "fca587f7e41600a85bdfb81ab55af39c7cd3b79c6761ac3e13e81b4a2987ebd0",
+      "availability": "Separately authorized ITAndroids handoff only; no binary distributed here"
+    },
+    "segmenter_compact": {
+      "xml_sha256": "68ff062e79112491ff26338054e263e07168f2c19f72d3eb624e411c53c1edee",
+      "bin_sha256": "09b13c0ee6d3260f13abd6b2bfea8908fd93b03cf3336be552dd8c05cc2d93ba",
+      "availability": "Separately authorized ITAndroids handoff only; no binary distributed here"
+    },
+    "detector_rectangular": {
+      "xml_sha256": "d229ddf158aa77cd114940585215ac872334f8e7add23149c73989a4fe77a3ce",
+      "bin_sha256": "2b97dabcc91d60a06a260153391d05fd84f3f2b8b80d37dc3b3a9506e80a662b",
+      "availability": "Separately authorized ITAndroids handoff only; no binary distributed here"
+    }
+  },
+  "profiles": {
+    "square_refit_buffered": {
+      "detector": "detector_square",
+      "segmenter": "segmenter_refit",
+      "height": 640
+    },
+    "square_compact_buffered": {
+      "detector": "detector_square",
+      "segmenter": "segmenter_compact",
+      "height": 640
+    },
+    "rect_refit_buffered": {
+      "detector": "detector_rectangular",
+      "segmenter": "segmenter_refit",
+      "height": 480
+    },
+    "rect_compact_buffered": {
+      "detector": "detector_rectangular",
+      "segmenter": "segmenter_compact",
+      "height": 480
+    }
+  }
+}

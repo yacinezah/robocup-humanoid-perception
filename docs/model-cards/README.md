@@ -1,5 +1,14 @@
 # Model catalogue
 
+**Current references (4 October 2026):** see the
+[final reference table](../system-and-evidence.md#final-reference-table) and
+[separate-stack contract](../reproducibility.md#current-separate-stack).
+DEP-R1 uses the rectangular production-derived detector plus S-compact and
+sparse32; SEG-R1 remains the explicit field/line quality reference. Those graphs
+have hash-pinned interfaces and are available only by authorized team handoff.
+The catalogue and contracts below describe the **historical public-release
+artifacts**, whose thresholds/outputs must not be substituted into DEP-R1.
+
 These are research artifacts, not replacements authorized for the robot. Model
 files are distributed separately from Git. The release artifact index records
 exact checksums and whether a binary is included or withheld. No dataset is
@@ -7,7 +16,7 @@ downloaded with a model.
 
 | Model | Intended role | Evidence | Important limitation |
 |---|---|---|---|
-| Three-class field/line segmenter | Explicit white-line reference | Corrected final-only real-image evaluation | Slow on NUC; operational agreement does not imply strict raw parity |
+| Historical three-class field/line segmenter | Historical explicit white-line reference | Corrected final-only real-image evaluation | Slow on NUC; operational agreement does not imply strict raw parity |
 | MobileNet field segmenter | Field-quality specialist | Open development bridge | Constant detector placeholder; raw parity warning |
 | Fast-SCNN field segmenter | Field-speed specialist | Open development plus actual NUC timing | Lower boundary quality than MobileNet |
 | YOLOv8n-640 | Controlled six-class accuracy reference | Three-seed sealed real-image test | NUC p95 exceeds 50 ms; raw parity not passed |

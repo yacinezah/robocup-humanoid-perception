@@ -15,6 +15,7 @@ model studies, selective-sharing architectures, deployment tools, deterministic
 simulation, probabilistic localization experiments and a focused C++ correction.
 The robot, team software and established model families are upstream work.
 
+[Current system and evidence](docs/system-and-evidence.md) ·
 [Technical reports](docs/reports/index.md) ·
 [Source map](#source-map) ·
 [Model contracts](docs/model-cards/README.md) ·
@@ -25,20 +26,28 @@ The robot, team software and established model families are upstream work.
 
 ## Selected results
 
+**Current reference (4 October 2026):** buffered rectangular detection +
+S-compact field/line segmentation + sparse32. See the
+[final reference table](docs/system-and-evidence.md#final-reference-table) for
+separate quality, CPU, localization and multitask decisions. Earlier reports
+remain historical authorities for their own protocols.
+
 | Contribution | Result | Evidence |
 |---|---|---|
-| Trustworthy field/line supervision | Corrected line labels, sequence grouping and deterministic evaluation; explicit-line Dice **0.8488** | Corrected final-only real-image evaluation |
+| Detector geometry debugging | Correct source restoration improves mAP50–95 **0.706104 → 0.744006**, unchanged weights/input | DET-R1 reused open development; production exposure unknown |
+| Complete CPU perception | Buffered rectangle + compact + sparse32 **51.105 → 46.993 ms**, **8.05%** lower p95 | DEP-R1 AC laptop, four P-core primaries; median of three repetition p95s; modest gain, below frozen 10% target |
+| Trustworthy field/line supervision | Sequence grouping, corrected labels and **2,400 manual masks**; quality and compact references remain distinct | SEG-R1 exposed development; all-mask refit has no independent accuracy estimate |
 | Controlled six-class detection | **12,018 images, three seeds**; YOLOv8n mAP50-95 **0.5296**, YOLO26n **0.5196** | Same-data sealed test |
 | Actual target-CPU measurement | YOLO26 had **46% lower four-thread p95** latency than YOLOv8; Fast-SCNN field inference **13.079 ms p95** | Intel NUC, measured separately by study |
-| Selective sharing with private field context | Selected efficient-sharing Dice **0.9902**, versus separate specialist **0.9893**; detector preserved | Matched open development evidence |
-| Typed-landmark causal localization | Real detector measurements with oracle map identity recovered **79.5%** of oracle median-translation gain | Gazebo diagnostic, not a deployable identity source |
+| Sharing isolated from compression | Only **2.04%** convolution MACs saved by sharing versus matched compact separate; line quality not preserved | MTL-R2 negative causal result; MTL-R3/R3.1 stopped before training |
+| Pose-level validation | Sparse32 supports tracking; final reset recovery only **7/18** | LOC-R6 same-world simulation; no robust global recovery or real-robot pose claim |
 | Probabilistic software debugging | Corrected neutral likelihood gating that let incompatible hypotheses outrank compatible ones | C++ tests, Gazebo and real-Chape runtime regression |
 
-Accuracy and latency are not one universal leaderboard. The 640-pixel detectors
-remain too slow for a 50 ms NUC p95 target. Multitask field quality is close to
-specialists on selected development data, but seed sensitivity, modest laptop
-CPU gains and strict raw-parity limits remain. Real robot localization accuracy
-was not measured. The deployed perception stack was not replaced.
+Accuracy and latency are not one universal leaderboard. Historical 640-pixel
+detectors exceeded a 50 ms NUC p95 target; the latest laptop result is not NUC
+evidence or whole-robot timing. Later explicit-line multitask work did not
+establish a specialist-preserving shared Pareto point. Strict raw export parity
+limitations remain. The deployed perception stack was not replaced.
 
 ## Research contributions
 
@@ -55,8 +64,9 @@ Separate field specialists establish quality and speed references. A controlled
 YOLOv8n/YOLO26n study separates architecture effects from data and seed effects.
 The multitask investigation progresses from supervision scale to a private
 field-semantic hierarchy, with frozen-sharing, joint-training and distillation
-controls. It distinguishes gains from field capacity from gains due to shared
-representation learning.
+controls. Later matched compact controls distinguish decoder compression from
+sharing. CPU feasibility gates stopped the final proposed architecture before
+training; the measurement follow-up ended unresolved.
 
 ![Controlled accuracy and target-CPU latency](results/figures/detector-comparison.png)
 
@@ -89,18 +99,24 @@ unit tests additionally require the versions listed in the environment guide.
 
 ### Inference on your own image
 
-Explicitly obtain a **raw-head multitask** model bundle from Releases, verify its
-checksums, and follow its model card. Then:
+The useful current system is the separate detector/field/line stack. Its
+production-derived model binaries are available only through a separately
+authorized ITAndroids handoff, **not in the public release**. With the pinned
+rectangle and S-compact XML/BIN pairs:
 
 ```bash
-perception-infer --model artifacts/multitask.xml --image my-frame.jpg \
-  --thresholds artifacts/thresholds.json --output prediction.json
+perception-separate --detector artifacts/detector-rectangular/model.xml \
+  --segmenter artifacts/segmenter-compact/model.xml \
+  --profile rect_compact_buffered --image my-frame.jpg --output prediction.json
 ```
 
-This writes source-coordinate detections and a field-probability array. It does
-not reject balls, track objects or associate landmarks with a map. Native
-end-to-end YOLO26 exports need their own decoder and must not be passed to an
-incompatible raw-head contract.
+This verifies both files of each graph before inference and writes
+source-coordinate detections, at most 32 line-support pixels, and three native
+dense probability maps. No automatic downloads or robot connection occur.
+See [exact contracts and run instructions](docs/reproducibility.md#current-separate-stack).
+Public synthetic tests work without these binaries. Historical raw-head
+multitask inference remains available as `perception-infer`; it uses a different
+model/decoder contract and is a research prototype.
 
 For a new CPU measurement, `perception-benchmark --help` exposes explicit
 thread, stream and power-state settings. Its synthetic-input model-only timing
@@ -114,7 +130,8 @@ is not a reproduction of historical complete-call timings.
 | Segmentation | [Inherited MIT model/training code](src/soccer_segmentation/) | [Field/line study](docs/reports/three-class-field-and-line-segmentation.md) |
 | Detection | [Raw-head decoding](src/robocup_perception/detection/) | [Controlled comparison](docs/reports/controlled-yolov8n-yolo26n-comparison.md) |
 | Multitask | [Models, losses, data masking and trainers](src/robocup_perception/multitask/) | [Architecture and contract](docs/methods/multitask-contract.md) |
-| CPU inference | [ONNX/OpenVINO export, parity and timing](src/robocup_perception/runtime/) | [Reproducibility](docs/reproducibility.md) |
+| Current separate inference | [Hash-checked CPU runtime](src/robocup_perception/runtime/separate.py) and [sparse32](src/robocup_perception/localization/sparse_support.py) | [System and evidence](docs/system-and-evidence.md) |
+| Historical export and timing | [ONNX/OpenVINO export, parity and timing](src/robocup_perception/runtime/) | [Reproducibility](docs/reproducibility.md) |
 | Ball selection | [Field-contact features and scoring](src/robocup_perception/ball_selection/) | [Generalization result](docs/reports/field-context-ball-selection.md) |
 | ROS/Gazebo | [Scenarios, capture, replay and patches](simulation/) | [Simulation dependencies](simulation/README.md) |
 | Localization | [Association, sensor assumptions and lines](src/robocup_perception/localization/) | [Observability audit](docs/reports/map-observability-and-symmetry.md) |

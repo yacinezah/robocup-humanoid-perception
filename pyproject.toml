@@ -20,6 +20,10 @@ publication = ["matplotlib>=3.9", "reportlab>=4", "pypdf>=5", "pymupdf>=1.24"]
 perception-infer = "robocup_perception.runtime.infer_openvino:main"
 perception-benchmark = "robocup_perception.runtime.benchmark:main"
 perception-parity = "robocup_perception.runtime.parity:main"
+perception-separate = "robocup_perception.runtime.separate:main"
+
+[tool.setuptools.package-data]
+"robocup_perception.runtime" = ["separate_models.json"]
 
 [tool.setuptools.packages.find]
 where = ["src"]

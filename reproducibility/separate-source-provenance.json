@@ -1,0 +1,20 @@
+{
+  "as_of": "2026-10-04",
+  "scope": "Current separate-stack public extraction; historical source-provenance.json remains unchanged",
+  "sources": [
+    {
+      "source": "post_consolidation_research/DEP-R1/runtime.py",
+      "source_sha256": "d08f309807954891d5ce2fe224f386aae09b419627d03bccdab8835450d9502e",
+      "public_path": "src/robocup_perception/runtime/separate.py",
+      "public_sha256": "8affd0823014b35c7c70346a57b3a8e53ae830b0e8b25815eb3741ff5948ef14",
+      "changes": "Inference-only extraction; decoder helpers also originate in DET-R1/scripts/runtime.py. Removed private fixture loader and experiment drivers; added artifact identity, input/graph validation, explicit reentry rejection and owned-output CLI. Numerical extraction checked on synthetic inputs."
+    },
+    {
+      "source": "post_consolidation_research/LOC-R6-SEG-LINES/handoff/sparse_lines.py",
+      "source_sha256": "332981d33c230071eea862a4bf025fcc9b69748accacafa080a8b0b152be7632",
+      "public_path": "src/robocup_perception/localization/sparse_support.py",
+      "public_sha256": "625848d7f3e26d714f08abc8325009c8c5c1869d14d5e1b4b8a89dbdcd06ab8f",
+      "changes": "Extracted sparse32/image-coordinate functions; omitted calibrated projection and 8/16-point modes; added probability range checks. Numerical operations retained."
+    }
+  ]
+}

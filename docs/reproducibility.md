@@ -29,6 +29,67 @@ archived; the cleaned latest trainer does not reproduce every earlier arm's
 implementation by substitution. GPU bit-exact restart was not independently
 demonstrated by the historical study.
 
+## Current separate stack
+
+The [current reference](system-and-evidence.md) is DEP-R1
+`rect_compact_buffered`. Install the package with the `runtime` extra as above.
+The public contract code and dataset-free tests require no private material.
+Model-backed inference requires a separately authorized ITAndroids handoff;
+the production detector and latest dense binaries are **not public release
+downloads**. Do not substitute similarly shaped historical release graphs.
+
+Keep each `model.xml` beside its corresponding `model.bin`. For the default
+profile, supply `detector-rectangular/model.xml` and
+`segmenter-compact/model.xml` from that handoff:
+
+```bash
+perception-separate --detector artifacts/detector-rectangular/model.xml \
+  --segmenter artifacts/segmenter-compact/model.xml \
+  --profile rect_compact_buffered --threads 4 \
+  --image my-frame.jpg --output output/prediction.json
+```
+
+The equivalent invocation without a refreshed console-script installation is
+`python -m robocup_perception.runtime.separate` with the same arguments.
+Choose a new `.json` output path. A sibling `.npz` stores a float32 array named
+`probabilities`, shaped `[3,320,320]` in background/line/exclusive-field order.
+Field union is channels 1+2. JSON records source detections, sparse line pixel
+centres, the actual letterbox transform, class order, model hashes and effective
+CPU properties. It never fabricates polygons, map identity or pose.
+
+The [bundled manifest](../src/robocup_perception/runtime/separate_models.json)
+defines four distinct buffered profiles: `rect_compact_buffered` (CPU),
+`square_compact_buffered`, `rect_refit_buffered` and `square_refit_buffered`
+(quality configuration). Each binds the exact XML and BIN hashes and tensor
+shapes. Hash mismatch stops before compilation; don't edit the manifest to make
+an arbitrary export look like a validated reference. The hash identifies bytes,
+not authenticity or redistribution permission. Verify the handoff source too.
+
+Detector input is RGB float32 [0,1], no-scaleup letterbox to 480×640 or 640×640,
+padding 114. Output is decoded xywh plus six probabilities in order ball,
+goalpost, robot, L, T, X. Predecode floor is >0.25, class-aware NMS IoU 0.7,
+then robot confidence >=0.6 and other classes >=0.3. Dense input is an independent
+RGB 320×320 warp; ImageNet normalization is inside the graph. Sparse support
+uses threshold 0.30, 16×16 tiles of 20×20 native pixels and at most 32 diverse
+points, mapped through pixel centres. This is not the raw-head multitask decoder.
+
+The CLI requests FP32, one stream, 1 or 4 inference threads, P cores and no
+hyperthreading. It does not change process affinity, power plan or system settings.
+The archived benchmark additionally pinned its worker to audited P-core primaries.
+Effective properties depend on the CPU/plugin. The extraction adds validation
+and a concurrency guard: its latency has **not** been benchmarked as 46.993 ms.
+One instance owns reusable buffers and rejects overlapping calls; returned arrays
+remain valid after later inference. Create separate instances for concurrent
+callers and budget their aggregate threads explicitly.
+
+The quality/timing evidence used landscape images with aspect ratio at least
+4:3. Other user images are technically accepted but have no corresponding
+validation claim. Strict historical Torch/IR parity failures remain failures;
+an exact archived-runtime extraction check does not repair export parity.
+No ROS, camera, calibrated projection, particle filter or real-robot accuracy is
+included. The old `perception-benchmark` measures one model on synthetic input;
+it cannot reproduce the archived complete separate-call p95 by itself.
+
 ## Training interface
 
 The extracted trainer requires `PERCEPTION_WORKROOT` pointing to a separately

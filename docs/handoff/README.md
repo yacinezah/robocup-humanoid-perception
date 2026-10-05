@@ -12,11 +12,20 @@ with a normal revert of its merge commit.
 ## Model candidates
 
 Read the [model contracts](../model-cards/README.md) before loading exports.
-Fast-SCNN is the field-speed candidate, MobileNet the field-quality candidate.
+The current CPU trial reference is [DEP-R1 buffered rectangle + S-compact +
+sparse32](../system-and-evidence.md), with [hash-checked inference
+instructions](../reproducibility.md#current-separate-stack). Corrected-square
+detector geometry and SEG-R1 remain separate quality references. These are
+research handoffs, not an approved model/configuration migration.
+
+Among historical binary-field artifacts, Fast-SCNN is the NUC speed candidate
+and MobileNet the field-quality candidate.
 The controlled 640 detector pair establishes an accuracy/CPU tradeoff, but
 neither is a 20 Hz NUC solution. The historical 320 detector is faster under a
 different accuracy protocol. Efficient multitask sharing is a development
-prototype, not evidence of independent accuracy preservation.
+prototype, not evidence of independent accuracy preservation. The later
+explicit-line MTL-R2 study did not preserve specialists, and MTL-R3/R3.1 did not
+establish CPU feasibility or authorize training.
 
 The deployed model is intentionally absent. Do not replace production binaries
 or change class order, preprocessing or decoded thresholds using this package.

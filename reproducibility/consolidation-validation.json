@@ -1,0 +1,202 @@
+{
+  "date": "2026-10-04",
+  "scope": "PUBLIC_EXTRACTION_SYNTHETIC_INTEGRITY_ONLY",
+  "private_images_or_evaluation_payloads_read": false,
+  "training_or_accuracy_evaluation": false,
+  "benchmark_or_parity_certificate": false,
+  "reference_runtime_sha256": "d08f309807954891d5ce2fe224f386aae09b419627d03bccdab8835450d9502e",
+  "fixtures": 3,
+  "profiles": 4,
+  "comparisons": [
+    {
+      "profile": "square_refit_buffered",
+      "synthetic_fixture": 0,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "square_refit_buffered",
+      "synthetic_fixture": 1,
+      "shape": [
+        240,
+        320,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "square_refit_buffered",
+      "synthetic_fixture": 2,
+      "shape": [
+        471,
+        631,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "square_compact_buffered",
+      "synthetic_fixture": 0,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "square_compact_buffered",
+      "synthetic_fixture": 1,
+      "shape": [
+        240,
+        320,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "square_compact_buffered",
+      "synthetic_fixture": 2,
+      "shape": [
+        471,
+        631,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "rect_refit_buffered",
+      "synthetic_fixture": 0,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "rect_refit_buffered",
+      "synthetic_fixture": 1,
+      "shape": [
+        240,
+        320,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "rect_refit_buffered",
+      "synthetic_fixture": 2,
+      "shape": [
+        471,
+        631,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "rect_compact_buffered",
+      "synthetic_fixture": 0,
+      "shape": [
+        480,
+        640,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "rect_compact_buffered",
+      "synthetic_fixture": 1,
+      "shape": [
+        240,
+        320,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    },
+    {
+      "profile": "rect_compact_buffered",
+      "synthetic_fixture": 2,
+      "shape": [
+        471,
+        631,
+        3
+      ],
+      "exact": {
+        "detections": true,
+        "probabilities": true,
+        "source_line_pixels": true,
+        "transform": true
+      }
+    }
+  ],
+  "passed": true,
+  "note": "Existing team-held FP32 graphs were hash verified and run on seeded artificial arrays only. Public tests use tiny artificial graphs and need none of these model binaries. Exact extraction retention does not change historical Torch/export parity failures or establish latency.",
+  "packaging": {
+    "wheel_build": "PASS",
+    "network_access": "none (--no-index --no-deps --no-build-isolation)",
+    "dependency_installation": false,
+    "wheel_contains_reference_manifest": true,
+    "console_entrypoint_registered": true,
+    "isolated_wheel_import_and_help": "PASS"
+  }
+}
