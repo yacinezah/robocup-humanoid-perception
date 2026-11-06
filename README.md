@@ -22,6 +22,8 @@ The robot, team software and established model families are upstream work.
 [Engineering handoff](docs/handoff/README.md) ·
 [Releases](https://github.com/yacinezah/robocup-humanoid-perception/releases)
 
+**Data release:** [TORSO-21 reviewed field-line masks](https://github.com/yacinezah/torso21-reviewed-field-lines/releases/tag/v0.1.0) — 2,400 reviewed masks, source mappings, and reproducible change analysis.
+
 ![Perception system and research contributions](results/figures/system-overview.png)
 
 ## Selected results
@@ -36,7 +38,7 @@ remain historical authorities for their own protocols.
 |---|---|---|
 | Detector geometry debugging | Correct source restoration improves mAP50–95 **0.706104 → 0.744006**, unchanged weights/input | DET-R1 reused open development; production exposure unknown |
 | Complete CPU perception | Buffered rectangle + compact + sparse32 **51.105 → 46.993 ms**, **8.05%** lower p95 | DEP-R1 AC laptop, four P-core primaries; median of three repetition p95s; modest gain, below frozen 10% target |
-| Trustworthy field/line supervision | Sequence grouping, corrected labels and **2,400 manual masks**; quality and compact references remain distinct | SEG-R1 exposed development; all-mask refit has no independent accuracy estimate |
+| Trustworthy field/line supervision | Sequence grouping, corrected labels and **2,400 human-reviewed masks**; quality and compact references remain distinct | SEG-R1 exposed development; all-mask refit has no independent accuracy estimate |
 | Controlled six-class detection | **12,018 images, three seeds**; YOLOv8n mAP50-95 **0.5296**, YOLO26n **0.5196** | Same-data sealed test |
 | Actual target-CPU measurement | YOLO26 had **46% lower four-thread p95** latency than YOLOv8; Fast-SCNN field inference **13.079 ms p95** | Intel NUC, measured separately by study |
 | Sharing isolated from compression | Only **2.04%** convolution MACs saved by sharing versus matched compact separate; line quality not preserved | MTL-R2 negative causal result; MTL-R3/R3.1 stopped before training |
